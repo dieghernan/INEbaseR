@@ -20,11 +20,11 @@ get_data_serie <- function(serie, date_start = NULL, date_end = NULL, nult = 0, 
 
   # Date format
   if (!is.null(date_start)) {
-    date_start <- format.Date(date_start,'%Y%m%d')
+    date_start <- format.Date(date_start, "%Y%m%d")
   }
 
   if (!is.null(date_end)) {
-    date_end <- format.Date(date_end,'%Y%m%d')
+    date_end <- format.Date(date_end, "%Y%m%d")
   }
 
   # Build URL
@@ -46,7 +46,6 @@ get_data_serie <- function(serie, date_start = NULL, date_end = NULL, nult = 0, 
   content <- get_content(url, verbose = FALSE)
 
   return(content)
-
 }
 
 
@@ -75,7 +74,6 @@ get_data_table <- function(id, nlast = 0, det = 0, tip = NULL, lang = "ES") {
   content <- get_content(url, verbose = FALSE)
 
   return(content)
-
 }
 
 
@@ -105,9 +103,9 @@ get_data_metadataoperation <- function(operation, query = NULL, p = 1, nult = 1,
   # Split query
   df_queries <- NULL
   queries <- strsplit(query, split = "AND")
-  for (queries_splited in queries){
+  for (queries_splited in queries) {
     var_val <- strsplit(queries_splited, split = "=")
-    for (string in var_val){
+    for (string in var_val) {
       df_queries <- rbind(df_queries, data.frame(string))
     }
   }
@@ -117,17 +115,17 @@ get_data_metadataoperation <- function(operation, query = NULL, p = 1, nult = 1,
   result <- NULL
   count <- 0
   g <- 1
-  for (qvalue in df_queries$string){
+  for (qvalue in df_queries$string) {
     qvalue <- trimws(as.character(qvalue))
     if (count %% 2 == 0) { # variables
-      variableId <- variables[match(qvalue, variables[["Nombre"]]),][["Id"]]
+      variableId <- variables[match(qvalue, variables[["Nombre"]]), ][["Id"]]
       variable <- paste0("g", g, "=", variableId, ":")
       result <- rbind(result, variable)
       g <- g + 1
     } else { # values
       value <- get_values_variableoperation(variableId, operation)
-      value <- value[match(qvalue, value[["Nombre"]]),][["Id"]]
-      if (is.na(value)){
+      value <- value[match(qvalue, value[["Nombre"]]), ][["Id"]]
+      if (is.na(value)) {
         value <- ""
       }
       value <- paste0(value, "&")
@@ -146,5 +144,4 @@ get_data_metadataoperation <- function(operation, query = NULL, p = 1, nult = 1,
   content <- get_content(url, verbose = FALSE)
 
   return(content)
-
 }

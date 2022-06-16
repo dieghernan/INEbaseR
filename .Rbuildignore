@@ -6,3 +6,5 @@
 ^INEbaseR\.Rcheck$
 ^INEbaseR.*\.tar\.gz$
 ^INEbaseR.*\.tgz$
+^LICENSE$
+^INEbaseR-manual\.pdf$

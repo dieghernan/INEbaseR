@@ -19,7 +19,6 @@
 #' get_values(762, operation = "IPC", resource = "variable_operation")
 #' @export
 get_values <- function(code = NULL, resource = "all", operation = NULL, help = FALSE, det = 0, ioe = FALSE, lang = "ES") {
-
   content <- NULL
 
   switch(resource,
@@ -27,9 +26,9 @@ get_values <- function(code = NULL, resource = "all", operation = NULL, help = F
       # Help
       if (help) {
         params <- c("code (variable id)", "det", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
-        message(paste0('Example (basic): get_values(115)'))
+        message(paste0("Example (basic): get_values(115)"))
         message(paste0('Example (extended): get_values(115, resource = "all", det = 0, lang = "ES")'))
       } else {
         content <- get_values_all(code, det, lang)
@@ -39,7 +38,7 @@ get_values <- function(code = NULL, resource = "all", operation = NULL, help = F
       # Help
       if (help) {
         params <- c("code (variable id)", "operation (operation id)", "det", "ioe", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_values(762, operation = "IPC", resource = "variable_operation")'))
         message(paste0('Example (extended): get_values(762, operation = "IPC", resource = "variable_operation, det = 0, ioe = FALSE, lang = "ES")'))
@@ -55,7 +54,6 @@ get_values <- function(code = NULL, resource = "all", operation = NULL, help = F
   if (!help) {
     return(content)
   }
-
 }
 
 
@@ -78,7 +76,6 @@ get_values_all <- function(id, det = 0, lang = "ES") {
   content <- get_content(url, verbose = FALSE)
 
   return(content)
-
 }
 
 
@@ -107,5 +104,4 @@ get_values_variableoperation <- function(id, op, det = 0, ioe = FALSE, lang = "E
   content <- get_content(url, verbose = FALSE)
 
   return(content)
-
 }

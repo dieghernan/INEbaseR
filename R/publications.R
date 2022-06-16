@@ -19,7 +19,6 @@
 #' get_publications(8, resource = "date")
 #' @export
 get_publications <- function(code = NULL, resource = "all", help = FALSE, det = 0, ioe = FALSE, lang = "ES") {
-
   content <- NULL
 
   switch(resource,
@@ -27,9 +26,9 @@ get_publications <- function(code = NULL, resource = "all", help = FALSE, det = 
       # Help
       if (help) {
         params <- c("det", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
-        message(paste0('Example (basic): get_publications()'))
+        message(paste0("Example (basic): get_publications()"))
         message(paste0('Example (extended): get_publications(resource = "all", det = 0, lang = "ES")'))
       } else {
         content <- get_publications_all(det, lang)
@@ -39,7 +38,7 @@ get_publications <- function(code = NULL, resource = "all", help = FALSE, det = 
       # Help
       if (help) {
         params <- c("code (operation id)", "ioe", "det", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_publications("IPC", resource = "operation")'))
         message(paste0('Example (extended): get_publications("IPC", resource = "operation", ioe = FALSE, det = 0, lang = "ES")'))
@@ -51,7 +50,7 @@ get_publications <- function(code = NULL, resource = "all", help = FALSE, det = 
       # Help
       if (help) {
         params <- c("code (publication id)", "det", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_publications(8, resource = "date")'))
         message(paste0('Example (extended): get_publications(8, resource = "date", det = 0, lang = "ES")'))
@@ -67,7 +66,6 @@ get_publications <- function(code = NULL, resource = "all", help = FALSE, det = 
   if (!help) {
     return(content)
   }
-
 }
 
 
@@ -89,7 +87,6 @@ get_publications_all <- function(det = 0, lang = "ES") {
   content <- get_content(url, verbose = FALSE)
 
   return(content)
-
 }
 
 
@@ -116,7 +113,6 @@ get_publications_operation <- function(code, ioe = FALSE, det = 0, lang = "ES") 
   content <- get_content(url, verbose = FALSE)
 
   return(content)
-
 }
 
 
@@ -138,5 +134,4 @@ get_publications_date <- function(code, det = 0, lang = "ES") {
   content <- get_content(url, verbose = FALSE)
 
   return(content)
-
 }

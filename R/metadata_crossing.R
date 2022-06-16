@@ -17,11 +17,22 @@
 #' @param lang (string) language used to obtain information
 #' @examples
 #' get_metadata_crossing(resource = "series", help = TRUE)
-#' get_metadata_crossing("IPC", resource = "series", query = "Provincias = Madrid AND Tipo de dato = Variacion mensual AND Grupos ECOICOP = NULL")
-#' get_metadata_crossing("IPC", resource = "data", query = "Provincias = Madrid AND Tipo de dato = Variacion mensual AND Grupos ECOICOP = NULL", nlast = 5)
+#' \dontrun{
+#' get_metadata_crossing(
+#'   "IPC",
+#'   resource = "series",
+#'   query = "Provincias = Madrid AND Tipo de dato = Variacion mensual AND Grupos ECOICOP = NULL"
+#' )
+#'
+#' get_metadata_crossing(
+#'   "IPC",
+#'   resource = "data",
+#'   query = "Provincias = Madrid AND Tipo de dato = Variacion mensual AND Grupos ECOICOP = NULL",
+#'   nlast = 5
+#' )
+#' }
 #' @export
 get_metadata_crossing <- function(code = NULL, resource = "series", help = FALSE, query = NULL, p = 1, det = 0, tip = NULL, nlast = 1, lang = "ES") {
-
   content <- NULL
 
   switch(resource,
@@ -30,7 +41,7 @@ get_metadata_crossing <- function(code = NULL, resource = "series", help = FALSE
       # Help
       if (help) {
         params <- c("code (operation id)", "query", "p", "det", "tip", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_metadata_crossing("IPC", resource = "series", query = "Provincias = Madrid AND Tipo de dato = Variacion mensual AND Grupos ECOICOP = NULL")'))
         message(paste0('Example (extended): get_metadata_crossing(code = "IPC", resource = "series", query = "Provincias = Madrid AND Tipo de dato = Variacion mensual AND Grupos ECOICOP = NULL", p = 1, det = 2, tip = "M", lang = "ES")'))
@@ -41,7 +52,7 @@ get_metadata_crossing <- function(code = NULL, resource = "series", help = FALSE
     data = {
       if (help) {
         params <- c("code (operation id)", "query", "p", "nlast", "det", "tip", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_metadata_crossing("IPC", resource = "data", query = "Provincias = Madrid AND Tipo de dato = Variacion mensual AND Grupos ECOICOP = NULL", nlast = 5)'))
         message(paste0('Example (extended): get_metadata_crossing(code = "IPC", resource = "data", query = "Provincias = Madrid AND Tipo de dato = Variacion mensual AND Grupos ECOICOP = NULL", p = 1, nlast = 5, det = 2, tip = "AM", lang = "ES")'))
@@ -50,7 +61,7 @@ get_metadata_crossing <- function(code = NULL, resource = "series", help = FALSE
       }
     },
     {
-     stop('ERROR: Possible values of param "resource" are: series or data')
+      stop('ERROR: Possible values of param "resource" are: series or data')
     }
   )
 

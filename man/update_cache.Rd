@@ -55,6 +55,5 @@ Possible values are \code{all or series}}
 This function allows to update cache data
 }
 \examples{
-update_cache(resource = "series")
 update_cache(resource = "series", help = TRUE)
 }

@@ -40,7 +40,9 @@ This function returns information about operations
 get_operations()
 get_operations(resource = "all")
 get_operations(resource = "all", help = TRUE)
+\dontrun{
 get_operations("IPC", resource = "metadata")
 get_operations("IPC", resource = "variables_values")
 get_operations(resource = "by_granularity", geographical_granularity = "PROV")
+}
 }

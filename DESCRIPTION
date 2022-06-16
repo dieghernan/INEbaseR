@@ -11,13 +11,14 @@ Maintainer: Andres Nacimiento <andresnacimiento@gmail.com>
 Description: R package for obtaining and analyzing open data from INE (Instituto Nacional de Estadistica) API.
 License: GPL (>= 3)
 Encoding: UTF-8
-LazyData: false
 BuildResaveData: false
 URL: https://inebaser.wordpress.com/, 
     https://ropenspain.github.io/INEbaseR/,
     https://github.com/rOpenSpain/INEbaseR
 BugReports: https://github.com/rOpenSpain/INEbaseR/issues
+Depends:
+   R (>= 3.5.0)
 Imports: 
   jsonlite,
   highcharter
-RoxygenNote: 7.0.2
+RoxygenNote: 7.2.0

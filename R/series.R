@@ -24,16 +24,15 @@
 #' @examples
 #' get_series("IPC206449")
 #' get_series(resource = "metadata", help = TRUE)
+#' \dontrun{
 #' get_series("IPC", resource = "operation")
 #' get_series("IPC206449", resource = "values")
 #' get_series(22350, resource = "table")
 #' get_series("IPC251541", resource = "nlast")
 #' get_series("IPC206449", resource = "data", nlast = 5)
-#' get_series("IPC", resource = "by_granularity", geographical_granularity = "CCAA", verbose = TRUE)
-#' get_series("IPC251539", resource = "by_common_parameters", verbose = TRUE)
+#' }
 #' @export
 get_series <- function(code = NULL, resource = "metadata", help = FALSE, ioe = FALSE, det = 0, tip = NULL, lang = "ES", date_start = NULL, date_end = NULL, nlast = NULL, classification = NULL, verbose = FALSE, benchmark = FALSE, geographical_granularity = NULL, temporal_granularity = NULL) {
-
   content <- NULL
 
   switch(resource,
@@ -42,7 +41,7 @@ get_series <- function(code = NULL, resource = "metadata", help = FALSE, ioe = F
       # Help
       if (help) {
         params <- c("code (serie id)", "det", "tip", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_series("IPC206449")'))
         message(paste0('Example (extended): get_series(code = "IPC206449", resource = "metadata", det = 2, tip = "M", lang = "ES")'))
@@ -55,7 +54,7 @@ get_series <- function(code = NULL, resource = "metadata", help = FALSE, ioe = F
       # Help
       if (help) {
         params <- c("code (operation id)", "ioe", "benchmark")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_series("IPC", resource = "operation")'))
         message(paste0('Example (extended): get_series(code = "IPC", resource = "operation", ioe = FALSE, benchmark = FALSE)'))
@@ -68,7 +67,7 @@ get_series <- function(code = NULL, resource = "metadata", help = FALSE, ioe = F
       # Help
       if (help) {
         params <- c("code (serie id)", "det", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_series("IPC206449", resource = "values")'))
         message(paste0('Example (extended): get_series(code = "IPC206449", resource = "values", det = 1, lang = "ES")'))
@@ -81,7 +80,7 @@ get_series <- function(code = NULL, resource = "metadata", help = FALSE, ioe = F
       # Help
       if (help) {
         params <- c("code (table id)", "det", "tip", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_series(22350, resource = "table")'))
         message(paste0('Example (extended): get_series(code = 22350, resource = "table", det = 2, tip = "M", lang = "ES")'))
@@ -94,7 +93,7 @@ get_series <- function(code = NULL, resource = "metadata", help = FALSE, ioe = F
       # Help
       if (help) {
         params <- c("code (serie id)", "date_start", "date_end", "nlast", "det", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_series("IPC206449", resource = "data", nlast = 5)'))
         message(paste0('Example (extended): get_series(code = "IPC206449", resource = "data", date_start = "2013-01-01", data_end = "2016-01-01", nlast = NULL, det = 2, lang = "ES")'))
@@ -107,7 +106,7 @@ get_series <- function(code = NULL, resource = "metadata", help = FALSE, ioe = F
       # Help
       if (help) {
         params <- c("code (operation id)", "geographical_granularity", "temporal_granularity", "verbose")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_series("IPC", resource = "by_granularity", geographical_granularity = "CCAA", verbose = TRUE)'))
         message(paste0('Example (extended): get_series(code = "IPC", resource = "by_granularity", geographical_granularity = "CCAA", temporal_granularity = "Mensual", verbose = TRUE)'))
@@ -120,7 +119,7 @@ get_series <- function(code = NULL, resource = "metadata", help = FALSE, ioe = F
       # Help
       if (help) {
         params <- c("code (serie id)", "classification", "verbose")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_series("IPC251539", resource = "by_common_parameters", verbose = TRUE)'))
         message(paste0('Example (extended): get_series(code = "IPC251539", resource = "by_common_parameters", classification = "Base 1992", verbose = TRUE)'))
@@ -133,7 +132,7 @@ get_series <- function(code = NULL, resource = "metadata", help = FALSE, ioe = F
       # Help
       if (help) {
         params <- c("code (serie id)")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_series("IPC251541", resource = "nlast")'))
         message(paste0('Example (extended): get_series("IPC251541", resource = "nlast")'))
@@ -149,7 +148,6 @@ get_series <- function(code = NULL, resource = "metadata", help = FALSE, ioe = F
   if (!help) {
     return(content)
   }
-
 }
 
 
@@ -161,11 +159,13 @@ get_series <- function(code = NULL, resource = "metadata", help = FALSE, ioe = F
 get_serie_metadata <- function(serie, det = 0, tip = NULL, lang = "ES") {
 
   # Checking options
-  if ((det < 0) || (det > 2))
+  if ((det < 0) || (det > 2)) {
     stop("You have defined 'det' parameter with an incorrect value.")
+  }
 
-  if ((tip != "M") && (!is.null(tip)))
+  if ((tip != "M") && (!is.null(tip))) {
     stop("You have defined 'tip' parameter with an incorrect value.")
+  }
 
   # URL definition
   url <- paste0("http://servicios.ine.es/wstempus/js/", lang, "/SERIE/", serie, "?det=", det, "&tip=", tip)
@@ -174,7 +174,6 @@ get_serie_metadata <- function(serie, det = 0, tip = NULL, lang = "ES") {
   data <- fromJSON(url)
 
   return(data)
-
 }
 
 
@@ -195,11 +194,11 @@ get_series_operation_cache <- function(operation, ioe = FALSE, benchmark = FALSE
 
   # Convert code to ID
   operations <- get_operations_all()
-  if (class(operation) == "character") {
-    operation <- operations[operations$Codigo == operation,]$Id
+  if (is.character(operation)) {
+    operation <- operations[operations$Codigo == operation, ]$Id
   } else {
     if (ioe) {
-      operation <- operations[operations$Cod_IOE == operation,]$Id
+      operation <- operations[operations$Cod_IOE == operation, ]$Id
     }
   }
 
@@ -215,7 +214,6 @@ get_series_operation_cache <- function(operation, ioe = FALSE, benchmark = FALSE
   }
 
   return(data)
-
 }
 
 
@@ -227,11 +225,13 @@ get_series_operation_cache <- function(operation, ioe = FALSE, benchmark = FALSE
 get_series_operation_api <- function(operation, det = 0, tip = NULL, pagination = FALSE, page = NULL, page_start = NULL, page_end = NULL, ioe = FALSE, lang = "ES", benchmark = FALSE) {
 
   # Checking options
-  if ((det < 0) || (det > 2))
+  if ((det < 0) || (det > 2)) {
     stop("You have defined 'det' parameter with an incorrect value.")
+  }
 
-  if ((tip != "M") && (!is.null(tip)))
+  if ((tip != "M") && (!is.null(tip))) {
     stop("You have defined 'tip' parameter with an incorrect value.")
+  }
 
   # Start the clock!
   if (benchmark) {
@@ -242,11 +242,11 @@ get_series_operation_api <- function(operation, det = 0, tip = NULL, pagination 
 
   # Convert code to ID
   operations <- get_operations_all()
-  if (class(operation) == "character") {
-    operation <- operations[operations$Codigo == operation,]$Id
+  if (is.character(operation)) {
+    operation <- operations[operations$Codigo == operation, ]$Id
   } else {
     if (ioe) {
-      operation <- operations[operations$Cod_IOE == operation,]$Id
+      operation <- operations[operations$Cod_IOE == operation, ]$Id
     }
   }
 
@@ -254,7 +254,6 @@ get_series_operation_api <- function(operation, det = 0, tip = NULL, pagination 
   data <- NULL
 
   if (pagination) {
-
     empty_content <- FALSE
     page <- 1
 
@@ -271,12 +270,11 @@ get_series_operation_api <- function(operation, det = 0, tip = NULL, pagination 
       # URL definition
       if (ioe) {
         url <- paste0("http://servicios.ine.es/wstempus/js/", lang, "/SERIES_OPERACION/IOE", operation, "?page=", page, "&det=", det, "&tip=", tip)
-      }
-      else {
+      } else {
         url <- paste0("http://servicios.ine.es/wstempus/js/", lang, "/SERIES_OPERACION/", operation, "?page=", page, "&det=", det, "&tip=", tip)
       }
 
-      #print(url)
+      # print(url)
       # Get content
       content <- get_content(url, max_iterations = 3, seconds = 30)
 
@@ -313,9 +311,7 @@ get_series_operation_api <- function(operation, det = 0, tip = NULL, pagination 
             data_content$Periodicidad <- rbind(data_content$Periodicidad, content$Periodicidad$Nombre[i])
             data_content$MetaData <- rbind(data_content$MetaData, content$MetaData[i])
           }
-
         }
-
       }
 
       # Convert to data frame
@@ -325,12 +321,12 @@ get_series_operation_api <- function(operation, det = 0, tip = NULL, pagination 
       data <- rbind(data, data_content)
 
       if (!is.null(page_end)) {
-        if (page == page_end)
+        if (page == page_end) {
           break
+        }
       }
 
       page <- page + 1
-
     }
 
     # Convert to data frame
@@ -338,21 +334,18 @@ get_series_operation_api <- function(operation, det = 0, tip = NULL, pagination 
 
     # Get all data
   } else {
-
     if (is.null(page)) {
       # URL definition
       if (ioe) {
         url <- paste0("http://servicios.ine.es/wstempus/js/", lang, "/SERIES_OPERACION/IOE", code, "?page=", NULL, "&det=", det, "&tip=", tip)
-      }
-      else {
+      } else {
         url <- paste0("http://servicios.ine.es/wstempus/js/", lang, "/SERIES_OPERACION/", code, "?page=", NULL, "&det=", det, "&tip=", tip)
       }
     } else {
       # URL definition
       if (ioe) {
         url <- paste0("http://servicios.ine.es/wstempus/js/", lang, "/SERIES_OPERACION/IOE", code, "?page=", page, "&det=", det, "&tip=", tip)
-      }
-      else {
+      } else {
         url <- paste0("http://servicios.ine.es/wstempus/js/", lang, "/SERIES_OPERACION/", code, "?page=", page, "&det=", det, "&tip=", tip)
       }
     }
@@ -370,7 +363,6 @@ get_series_operation_api <- function(operation, det = 0, tip = NULL, pagination 
   }
 
   return(data)
-
 }
 
 
@@ -392,7 +384,6 @@ get_series_values <- function(code, det = 0, lang = "ES") {
   content <- fromJSON(url)
 
   return(content)
-
 }
 
 
@@ -461,14 +452,14 @@ get_series_metadataoperation <- function(code, query = NULL, p = NULL, det = 0, 
   for (qvalue in df_queries$string) {
     qvalue <- trimws(as.character(qvalue))
     if (count %% 2 == 0) { # variables
-      variableId <- variables[match(qvalue, variables[["Nombre"]]),][["Id"]]
+      variableId <- variables[match(qvalue, variables[["Nombre"]]), ][["Id"]]
       variable <- paste0("g", g, "=", variableId, ":")
       result <- rbind(result, variable)
       g <- g + 1
-    # values
+      # values
     } else {
       value <- get_values_variableoperation(variableId, code)
-      value <- value[match(qvalue, value[["Nombre"]]),][["Id"]]
+      value <- value[match(qvalue, value[["Nombre"]]), ][["Id"]]
       if (is.na(value)) {
         value <- ""
       }
@@ -492,7 +483,6 @@ get_series_metadataoperation <- function(code, query = NULL, p = NULL, det = 0, 
   content <- get_content(url, verbose = FALSE)
 
   return(content)
-
 }
 
 
@@ -520,5 +510,4 @@ get_serie_nlast <- function(serie) {
   }
 
   return(nult)
-
 }

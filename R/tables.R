@@ -26,7 +26,6 @@
 #' get_tables(22350, nlast = 5, resource = "data")
 #' @export
 get_tables <- function(code = NULL, resource = "operation", help = FALSE, grp = NULL, geo = 0, nlast = 0, det = 0, tip = NULL, ioe = FALSE, lang = "ES") {
-
   content <- NULL
 
   switch(resource,
@@ -34,7 +33,7 @@ get_tables <- function(code = NULL, resource = "operation", help = FALSE, grp = 
       # Help
       if (help) {
         params <- c("code (operation id)", "det", "geo", "tip", "ioe", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_tables("IPC")'))
         message(paste0('Example (extended): get_tables(code = "IPC", resource = "operation", det = 0, geo = 0, tip = NULL, ioe = FALSE, lang = "ES")'))
@@ -46,7 +45,7 @@ get_tables <- function(code = NULL, resource = "operation", help = FALSE, grp = 
       # Help
       if (help) {
         params <- c("code (table id)", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_tables(22350, resource = "group")'))
         message(paste0('Example (extended): get_tables(code = 22350, resource = "group", lang = "ES")'))
@@ -58,7 +57,7 @@ get_tables <- function(code = NULL, resource = "operation", help = FALSE, grp = 
       # Help
       if (help) {
         params <- c("code (table id)", "grp", "det", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_tables(22350, grp = 81497, resource = "group_values")'))
         message(paste0('Example (extended): get_tables(code = 22350, grp = 81497, resource = "group_values", det = 0, lang = "ES")'))
@@ -70,7 +69,7 @@ get_tables <- function(code = NULL, resource = "operation", help = FALSE, grp = 
       # Help
       if (help) {
         params <- c("code (table id)", "nlast", "det", "tip", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_tables(22350, nlast = 5, resource = "data")'))
         message(paste0('Example (extended): get_tables(22350, nlast = 5, resource = "data", det = 0, tip = NULL, lang = "ES")'))
@@ -86,7 +85,6 @@ get_tables <- function(code = NULL, resource = "operation", help = FALSE, grp = 
   if (!help) {
     return(content)
   }
-
 }
 
 
@@ -121,7 +119,6 @@ get_tables_operation <- function(code, det = 0, geo = 0, tip = NULL, ioe = FALSE
   content <- fromJSON(url)
 
   return(content)
-
 }
 
 
@@ -137,7 +134,6 @@ get_tables_group <- function(id, lang = "ES") {
   content <- fromJSON(url)
 
   return(content)
-
 }
 
 
@@ -159,5 +155,4 @@ get_tables_group_values <- function(id, grp, det = 0, lang = "ES") {
   content <- fromJSON(url)
 
   return(content)
-
 }
