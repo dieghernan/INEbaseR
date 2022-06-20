@@ -18,12 +18,14 @@
 #' @param ioe (boolean) use \code{ioe = TRUE} if code is in format \code{IO30138}, and \code{FALSE} by default
 #' @param lang (string) language used to obtain information
 #' @examples
+#' \donttest{
 #' get_tables("IPC")
 #' get_tables(resource = "operation", help = TRUE)
 #' get_tables(25, resource = "operation")
 #' get_tables(22350, resource = "group")
 #' get_tables(22350, grp = 81497, resource = "group_values")
 #' get_tables(22350, nlast = 5, resource = "data")
+#' }
 #' @export
 get_tables <- function(code = NULL, resource = "operation", help = FALSE, grp = NULL, geo = 0, nlast = 0, det = 0, tip = NULL, ioe = FALSE, lang = "ES") {
   content <- NULL

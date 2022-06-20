@@ -44,10 +44,12 @@ to obtain the metadata (crossing variables-values) of the series and a friendly 
 This function returns data / metadata from tables
 }
 \examples{
+\donttest{
 get_tables("IPC")
 get_tables(resource = "operation", help = TRUE)
 get_tables(25, resource = "operation")
 get_tables(22350, resource = "group")
 get_tables(22350, grp = 81497, resource = "group_values")
 get_tables(22350, nlast = 5, resource = "data")
+}
 }

@@ -13,10 +13,12 @@
 #' @param ioe (boolean) \code{TRUE} if code is in format \code{IO30138}, and \code{FALSE} by default
 #' @param lang (string) language used to obtain information
 #' @examples
+#' \donttest{
 #' get_publications()
 #' get_publications(resource = "all", help = TRUE)
 #' get_publications("IPC", resource = "operation")
 #' get_publications(8, resource = "date")
+#' }
 #' @export
 get_publications <- function(code = NULL, resource = "all", help = FALSE, det = 0, ioe = FALSE, lang = "ES") {
   content <- NULL

@@ -31,8 +31,10 @@ Possible values are \code{all, operation or date}}
 This function returns all available publications from an operation or a date
 }
 \examples{
+\donttest{
 get_publications()
 get_publications(resource = "all", help = TRUE)
 get_publications("IPC", resource = "operation")
 get_publications(8, resource = "date")
+}
 }
