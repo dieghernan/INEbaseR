@@ -60,11 +60,11 @@ This function returns data or metadata from an operation, table or a serie
 \examples{
 get_series("IPC206449")
 get_series(resource = "metadata", help = TRUE)
+\dontrun{
 get_series("IPC", resource = "operation")
 get_series("IPC206449", resource = "values")
 get_series(22350, resource = "table")
 get_series("IPC251541", resource = "nlast")
 get_series("IPC206449", resource = "data", nlast = 5)
-get_series("IPC", resource = "by_granularity", geographical_granularity = "CCAA", verbose = TRUE)
-get_series("IPC251539", resource = "by_common_parameters", verbose = TRUE)
+}
 }

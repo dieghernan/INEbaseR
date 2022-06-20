@@ -54,9 +54,11 @@ it's only for PROV or CCAA geographical granularity, \code{map_scale = 60} by de
 This function allows representing series data in maps or charts
 }
 \examples{
+\dontrun{
 represent_series("IPC251521", resource = "maps")
 represent_series(resource = "maps", help = TRUE)
 represent_series("IPC251521", resource = "maps", map_scale = NULL)
 represent_series("IPC206449", resource = "plot", nlast = 5)
 represent_series("IPC206449", resource = "highcharts", nlast = 5)
+}
 }

@@ -12,22 +12,17 @@
 # get_frequency("Trimestral")
 # get_frequency("Anual")
 get_frequency <- function(periodicity, data = NULL) {
-
   if (periodicity == "Mensual") {
     frequency <- 12
-  }
-  else if (periodicity == "Trimestral") {
+  } else if (periodicity == "Trimestral") {
     frequency <- 4
-  }
-  else if (periodicity == "Anual") {
+  } else if (periodicity == "Anual") {
     frequency <- 1
-  }
-  else {
+  } else {
     frequency <- 0
   }
 
   if (!is.null(data)) {
-
     if (frequency == 12) {
       if (length(data$FK_Periodo) == 1) {
         month <- paste0(0, data$FK_Periodo)
@@ -53,13 +48,10 @@ get_frequency <- function(periodicity, data = NULL) {
 
     if (frequency == 1) {
       return(paste0(data$Anyo, "/01/01"))
-
     }
-
   }
 
   return(frequency)
-
 }
 
 
@@ -71,21 +63,20 @@ get_frequency <- function(periodicity, data = NULL) {
 # plot_series("IPC206449", "2013-01-01", "2016-01-01") # Get data of a series between two dates
 # plot_series("IPC206449", "2010-01-01") # Get data from a series from a date
 plot_series <- function(code, date_start = NULL, date_end = NULL, nult = 0, det = 0, type = NULL, lang = "ES") {
-
   if (is.null(type)) {
-    type = "p"
+    type <- "p"
   }
 
-  #timestamp_vector <- as.POSIXct((data$Fecha + 0.1) / 1000, origin = "1970-01-01", tz = "CET")
+  # timestamp_vector <- as.POSIXct((data$Fecha + 0.1) / 1000, origin = "1970-01-01", tz = "CET")
 
-  #data <- get_data_serie(code, date_start, date_end, nult, det, lang)$Data
+  # data <- get_data_serie(code, date_start, date_end, nult, det, lang)$Data
   data <- get_series(code, resource = "data", nlast = nult, date_start = date_start, date_end = date_end, det = det, lang = lang)$Data
-  #serie <- get_series(code)
+  # serie <- get_series(code)
   serie <- get_series(code, resource = "metadata", det = 2, tip = "M")
   frequency <- get_frequency(serie$Periodicidad$Nombre, data)
   print(frequency)
 
-  plot(x = as.Date(frequency), y =  data$Valor, xlab = "", ylab = "", type = type)
+  plot(x = as.Date(frequency), y = data$Valor, xlab = "", ylab = "", type = type)
   title(main = paste0(serie$Nombre, "\n", "Serie (", code, ")"), xlab = "Fechas", ylab = "Valores de la serie")
 }
 
@@ -99,9 +90,9 @@ plot_series <- function(code, date_start = NULL, date_end = NULL, nult = 0, det 
 # highcharts_series("IPC206449", "2010-01-01") # Get data from a series from a date
 highcharts_series <- function(code, date_start = NULL, date_end = NULL, nult = 0, det = 0, lang = "ES") {
 
-  #data <- get_data_serie(code, date_start, date_end, nult, det, lang)$Data
+  # data <- get_data_serie(code, date_start, date_end, nult, det, lang)$Data
   data <- get_series(code, resource = "data", nlast = nult, date_start = date_start, date_end = date_end, det = det, lang = lang)$Data
-  #serie <- get_series(code)
+  # serie <- get_series(code)
   serie <- get_series(code, resource = "metadata", det = 2, tip = "M")
   frequency <- get_frequency(serie$Periodicidad$Nombre)
   data_ts <- ts(data = data$Valor, start = data$Anyo[[1]], frequency = frequency)
@@ -114,4 +105,3 @@ highcharts_series <- function(code, date_start = NULL, date_end = NULL, nult = 0
     hc_xAxis(type = "datetime", title = list(text = "Fechas")) %>%
     hc_add_series(data = data_ts, name = paste0("Serie ", code))
 }
-

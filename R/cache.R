@@ -21,11 +21,9 @@
 #' @param det (int) \code{det = 2} to see two levels of depth, specifically to access the \code{PubFechaAct} object, \code{det = 0} by default
 #' @param lang (string) language used to obtain information
 #' @examples
-#' update_cache(resource = "series")
 #' update_cache(resource = "series", help = TRUE)
 #' @export
 update_cache <- function(code = NULL, resource = "series", help = FALSE, n = 0, page = 1, pagination = TRUE, page_start = NULL, page_end = NULL, benchmark = FALSE, force = FALSE, ignore_series = NULL, tip = "M", det = 2, lang = "ES") {
-
   content <- NULL
 
   switch(resource,
@@ -33,7 +31,7 @@ update_cache <- function(code = NULL, resource = "series", help = FALSE, n = 0, 
       # Help
       if (help) {
         params <- c("code (operation id)", "benchmark", "page", "tip", "det", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): update_cache(resource = "series")'))
         message(paste0('Example (extended): update_cache("IPC", resource = "series", benchmark = FALSE, page = 1, tip = "M", det = 2, lang = "ES")'))
@@ -45,7 +43,7 @@ update_cache <- function(code = NULL, resource = "series", help = FALSE, n = 0, 
       # Help
       if (help) {
         params <- c("code", "n", "page", "pagination", "page_start", "page_end", "benchmark", "force", "ignore_series", "tip", "det")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): update_cache("IPC", resource = "all")'))
         message(paste0('Example (extended): update_cache("IPC", resource = "all", n = 0, page = NA, pagination = TRUE, page_start = NA, page_end = NA, benchmark = TRUE, force = FALSE, ignore_series = NULL, tip = "M", det = 2)'))
@@ -61,7 +59,6 @@ update_cache <- function(code = NULL, resource = "series", help = FALSE, n = 0, 
   if (!help) {
     return(content)
   }
-
 }
 
 
@@ -72,11 +69,12 @@ update_cache <- function(code = NULL, resource = "series", help = FALSE, n = 0, 
 # update_cache_all(code = 249, page = 1)
 # update_cache_all(n = 3)
 update_cache_all <- function(code = 0, n = 0, page = NA, pagination = TRUE, page_start = NULL, page_end = NULL, benchmark = TRUE, force = FALSE, ignore_series = NULL, tip = "M", det = 2) {
-
-  if (n < 0)
+  if (n < 0) {
     stop("You have defined 'n' parameter with an incorrect value.")
-  if (code < 0)
+  }
+  if (code < 0) {
     stop("You have defined 'code' parameter with an incorrect value.")
+  }
 
   # Start the clock!
   if (benchmark) {
@@ -91,15 +89,13 @@ update_cache_all <- function(code = 0, n = 0, page = NA, pagination = TRUE, page
   operations <- get_operations_all()
 
   if (code > 0) {
-
     series_operation <- get_series_operation_api(code, pagination = pagination, page = page, page_start = page_start, page_end = page_end, tip = tip, det = det)
 
     if (length(series_operation) == 0) {
-      message(paste0("No operations founds for ", operations[operations$Id == code,][["Nombre"]], " (", code, ")"))
+      message(paste0("No operations founds for ", operations[operations$Id == code, ][["Nombre"]], " (", code, ")"))
     } else {
-      print(paste0("Operation '", operations[operations$Id == code,][["Nombre"]], "(", operations[operations$Id == code,][["Id"]], ")", "' has been cached"))
+      print(paste0("Operation '", operations[operations$Id == code, ][["Nombre"]], "(", operations[operations$Id == code, ][["Id"]], ")", "' has been cached"))
     }
-
   } else {
     # Get number of series to be the cached
     if (n > 0) {
@@ -119,48 +115,43 @@ update_cache_all <- function(code = 0, n = 0, page = NA, pagination = TRUE, page
 
         # Ignore series
         if (!is.null(ignore_series)) {
-
           if (operations$Id[i] %in% ignore_series) {
             print(paste0("[", i, "] ", "Operation '", operations$Nombre[i], "(", operations$Id[i], ")", "' IGNORED (by user)"))
-
           } else {
-            series_operation <- get_series_operation_api(code = operations$Id[i], pagination = pagination, page = page, page_start = page_start, page_end = page_end, tip = tip, det = det)
+            series_operation <- get_series_operation_api(operation = operations$Id[i], pagination = pagination, page = page, page_start = page_start, page_end = page_end, tip = tip, det = det)
             print(paste0("[", i, "] ", "Operation '", operations$Nombre[i], "(", operations$Id[i], ")", "' has been cached"))
           }
 
-        # Don't ignore series
+          # Don't ignore series
         } else {
-          series_operation <- get_series_operation_api(code = operations$Id[i], pagination = pagination, page = page, page_start = page_start, page_end = page_end, tip = tip, det = det)
+          series_operation <- get_series_operation_api(operation = operations$Id[i], pagination = pagination, page = page, page_start = page_start, page_end = page_end, tip = tip, det = det)
           print(paste0("[", i, "] ", "Operation '", operations$Nombre[i], "(", operations$Id[i], ")", "' has been cached"))
         }
 
-      # Update only outdated caché files
+        # Update only outdated caché files
       } else {
 
         # Ignore series
         if (!is.null(ignore_series)) {
-
           if (operations$Id[i] %in% ignore_series) {
             print(paste0("[", i, "] ", "Operation '", operations$Nombre[i], "(", operations$Id[i], ")", "' IGNORED (by user)"))
           } else {
             if (!check_cache("SERIEOPERATION", operations$Id[i])) {
-              series_operation <- get_series_operation_api(code = operations$Id[i], pagination = pagination, page = page, page_start = page_start, page_end = page_end, tip = tip, det = det)
+              series_operation <- get_series_operation_api(operation = operations$Id[i], pagination = pagination, page = page, page_start = page_start, page_end = page_end, tip = tip, det = det)
               print(paste0("[", i, "] ", "Operation '", operations$Nombre[i], "(", operations$Id[i], ")", "' has been cached"))
             } else {
               print(paste0("[", i, "] ", "Operation '", operations$Nombre[i], "(", operations$Id[i], ")", "' IGNORED (already is updated)"))
             }
           }
 
-        # Don't ignore series
+          # Don't ignore series
         } else {
-
           if (!check_cache("SERIEOPERATION", operations$Id[i])) {
-            series_operation <- get_series_operation_cache(code = operations$Id[i], pagination = pagination, page = page, page_start = page_start, page_end = page_end, cache = FALSE, tip = tip, det = det)
+            series_operation <- get_series_operation_cache(operation = operations$Id[i], pagination = pagination, page = page, page_start = page_start, page_end = page_end, cache = FALSE, tip = tip, det = det)
             print(paste0("[", i, "] ", "Operation '", operations$Nombre[i], "(", operations$Id[i], ")", "' has been cached"))
           } else {
             print(paste0("[", i, "] ", "Operation '", operations$Nombre[i], "(", operations$Id[i], ")", "' IGNORED (already is updated)"))
           }
-
         }
       }
     }
@@ -170,7 +161,6 @@ update_cache_all <- function(code = 0, n = 0, page = NA, pagination = TRUE, page
   if (benchmark) {
     print(proc.time() - ptm)
   }
-
 }
 
 
@@ -198,7 +188,7 @@ update_series <- function(serie = NULL, benchmark = TRUE, page = 1, tip = "M", d
     for (operation in operations$Id) {
 
       # Convert operation ID to operation Name
-      operation_name <- operations[operations$Id == operation,]$Nombre
+      operation_name <- operations[operations$Id == operation, ]$Nombre
 
       message(paste0("Checking updates for operation '", operation_name, " (", operation, ")' ..."))
 
@@ -271,7 +261,6 @@ update_series <- function(serie = NULL, benchmark = TRUE, page = 1, tip = "M", d
           # SERIES
           message(paste0("** Updating series of operation ... (page ", page, ")"))
           for (i in 1:nrow(content)) {
-
             if (content$COD[i] == last_serie) {
               # Stop if found the last serie stored in cache
               break
@@ -292,9 +281,7 @@ update_series <- function(serie = NULL, benchmark = TRUE, page = 1, tip = "M", d
               data_content$Periodicidad <- rbind(data_content$Periodicidad, content$Periodicidad$Nombre[index_series])
               data_content$MetaData <- rbind(data_content$MetaData, content$MetaData[index_series])
             }
-
           }
-
         }
 
         if (!already_updated) {
@@ -307,10 +294,7 @@ update_series <- function(serie = NULL, benchmark = TRUE, page = 1, tip = "M", d
 
           # Save
           save_to_rds(series, operation, type = "SERIEOPERATION")
-
         }
-
-
       }
     }
   }
@@ -319,7 +303,6 @@ update_series <- function(serie = NULL, benchmark = TRUE, page = 1, tip = "M", d
   if (benchmark) {
     print(proc.time() - ptm)
   }
-
 }
 
 
@@ -341,7 +324,7 @@ get_cache_directory_path <- function(package = "INEbaseR", path = "extdata") {
 
 # Check if file is in cache or not
 # Example: check_cache("SERIEOPERATION", 4, get_file_name = TRUE)
-check_cache <- function(data_type, code, get_file_name = FALSE){
+check_cache <- function(data_type, code, get_file_name = FALSE) {
 
   # Build cache file name to check
   file_name <- get_cache_file_name(data_type, code)
@@ -359,7 +342,6 @@ check_cache <- function(data_type, code, get_file_name = FALSE){
     # File not exists
     return(FALSE)
   }
-
 }
 
 
@@ -376,8 +358,7 @@ save_to_rds <- function(data, object, type = "SERIEOPERATION") {
   saveRDS(data, file = file_name_rds, version = 2)
 
   # Output messege
-  message(paste0("Notification: ",  object, "' compressed successfully to RDS format."))
-
+  message(paste0("Notification: ", object, "' compressed successfully to RDS format."))
 }
 
 
@@ -388,13 +369,11 @@ save_to_rds <- function(data, object, type = "SERIEOPERATION") {
 # Example: get_rds_file_name("natcodes", type = "DATATABLE")
 # Example: get_rds_file_name(25, type = "SERIESOPERATION")
 get_rds_file_name <- function(object, extension = ".rds", type = "SERIESOPERATION") {
-
   directory_root <- get_cache_directory_path()
   type <- paste0("/", type, "-")
   file_name <- paste0(directory_root, type, object, extension)
 
   return(file_name)
-
 }
 
 
@@ -422,7 +401,6 @@ get_cache_rds <- function(object, type = "SERIEOPERATION") {
   }
 
   return(content)
-
 }
 
 
@@ -441,7 +419,6 @@ get_last_serie_cache <- function(operation) {
 
   # Return
   return(last_cod)
-
 }
 
 
@@ -460,7 +437,6 @@ get_last_serie_api <- function(operation, page = 1, tip = "M", det = 2, lang = "
 
   # Return
   return(last_cod)
-
 }
 
 
@@ -472,7 +448,7 @@ get_serie_page <- function(serie, operation, page = 1, det = 2, tip = "M", lang 
   # Flag
   serie_found <- FALSE
 
-  while(!serie_found) {
+  while (!serie_found) {
 
     # Build URL
     url <- paste0("http://servicios.ine.es/wstempus/js/", lang, "/SERIES_OPERACION/", operation, "?page=", page, "&det=", det, "&tip=", tip)
@@ -487,25 +463,18 @@ get_serie_page <- function(serie, operation, page = 1, det = 2, tip = "M", lang 
     # If not found: return 0
     if (is.null(content)) {
       return(0)
-
     } else {
-
       if (serie %in% content$COD) {
 
         # Break the loop
         serie_found <- TRUE
-
       } else {
         # Next page
         # print(paste0("Serie ", serie, " not found in page ", page))
         page <- page + 1
-
       }
     }
-
   }
 
   return(page)
-
 }
-

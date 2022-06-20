@@ -5,4 +5,8 @@
 
 #' @import jsonlite
 #' @import highcharter
+#' @importFrom graphics title
+#' @importFrom stats rnorm ts
+#' @importFrom utils file_test head
+NULL
 NULL

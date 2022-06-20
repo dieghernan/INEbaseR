@@ -18,12 +18,13 @@
 #' get_operations()
 #' get_operations(resource = "all")
 #' get_operations(resource = "all", help = TRUE)
+#' \dontrun{
 #' get_operations("IPC", resource = "metadata")
 #' get_operations("IPC", resource = "variables_values")
 #' get_operations(resource = "by_granularity", geographical_granularity = "PROV")
+#' }
 #' @export
 get_operations <- function(code = NULL, resource = "all", help = FALSE, ioe = FALSE, geographical_granularity = NULL, temporal_granularity = NULL, verbose = TRUE, lang = "ES") {
-
   content <- NULL
 
   switch(resource,
@@ -31,9 +32,9 @@ get_operations <- function(code = NULL, resource = "all", help = FALSE, ioe = FA
       # Help
       if (help) {
         params <- c("lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
-        message(paste0('Example (basic): get_operations()'))
+        message(paste0("Example (basic): get_operations()"))
         message(paste0('Example (extended): get_operations(resource = "all", lang = "ES")'))
       } else {
         content <- get_operations_all(lang)
@@ -43,7 +44,7 @@ get_operations <- function(code = NULL, resource = "all", help = FALSE, ioe = FA
       # Help
       if (help) {
         params <- c("code (operation id)", "ioe", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_operations("IPC", resource = "metadata")'))
         message(paste0('Example (extended): get_operations("IPC", resource = "metadata", ioe = FALSE, lang = "ES")'))
@@ -55,7 +56,7 @@ get_operations <- function(code = NULL, resource = "all", help = FALSE, ioe = FA
       # Help
       if (help) {
         params <- c("code (operation id)", "ioe", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_operations("IPC", resource = "variables_values")'))
         message(paste0('Example (extended): get_operations("IPC", resource = "variables_values", ioe = FALSE, lang = "ES")'))
@@ -67,7 +68,7 @@ get_operations <- function(code = NULL, resource = "all", help = FALSE, ioe = FA
       # Help
       if (help) {
         params <- c("geographical_granularity", "temporal_granularity", "verbose")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_operations(resource = "by_granularity", geographical_granularity = "PROV")'))
         message(paste0('Example (extended): get_operations(resource = "by_granularity", geographical_granularity = "PROV", temporal_granularity = NULL, verbose = TRUE)'))
@@ -83,7 +84,6 @@ get_operations <- function(code = NULL, resource = "all", help = FALSE, ioe = FA
   if (!help) {
     return(content)
   }
-
 }
 
 
@@ -99,7 +99,6 @@ get_operations_all <- function(lang = "ES") {
   content <- get_content(url, verbose = FALSE)
 
   return(content)
-
 }
 
 

@@ -21,7 +21,6 @@
 #' get_geographical(natcode = 34050000000, resource = "natcode_to_geocode")
 #' @export
 get_geographical <- function(code = NULL, resource = "variable", all = FALSE, verbose = FALSE, natcode = NULL, geocode = NULL, exponential_notation = FALSE, help = FALSE) {
-
   content <- NULL
 
   switch(resource,
@@ -29,7 +28,7 @@ get_geographical <- function(code = NULL, resource = "variable", all = FALSE, ve
       # Help
       if (help) {
         params <- c("code (serie id)")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_geographical("IPC251522")'))
         message(paste0('Example (extended): get_geographical("IPC251522", resource = "variable")'))
@@ -41,7 +40,7 @@ get_geographical <- function(code = NULL, resource = "variable", all = FALSE, ve
       # Help
       if (help) {
         params <- c("code (serie id)", "all", "verbose")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_geographical("IPC251522", resource = "natcode")'))
         message(paste0('Example (extended): get_geographical("IPC251522", resource = "natcode", all = FALSE, verbose = FALSE)'))
@@ -53,7 +52,7 @@ get_geographical <- function(code = NULL, resource = "variable", all = FALSE, ve
       # Help
       if (help) {
         params <- c("natcode", "geocode", "exponential_notation")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): get_geographical(natcode = 34050000000, resource = "natcode_to_geocode")'))
         message(paste0('Example (extended): get_geographical(natcode = 34050000000, geocode = NULL, resource = "natcode_to_geocode", exponential_notation = FALSE)'))
@@ -69,7 +68,6 @@ get_geographical <- function(code = NULL, resource = "variable", all = FALSE, ve
   if (!help) {
     return(content)
   }
-
 }
 
 
@@ -92,14 +90,15 @@ get_geographical <- function(code = NULL, resource = "variable", all = FALSE, ve
 #' @param type (string) what type of plot should be drawn, \code{type = "p"} (for points) by default. See \code{type} in \code{\link{plot}}
 #' @param lang (string) language used to obtain information
 #' @examples
+#' \dontrun{
 #' represent_series("IPC251521", resource = "maps")
 #' represent_series(resource = "maps", help = TRUE)
 #' represent_series("IPC251521", resource = "maps", map_scale = NULL)
 #' represent_series("IPC206449", resource = "plot", nlast = 5)
 #' represent_series("IPC206449", resource = "highcharts", nlast = 5)
+#' }
 #' @export
 represent_series <- function(code = NULL, resource = "maps", help = FALSE, nlast = 0, date_start = NULL, date_end = NULL, classification = NULL, map_scale = 60, verbose = FALSE, benchmark = FALSE, det = 0, type = NA, lang = "ES") {
-
   content <- NULL
 
   switch(resource,
@@ -107,7 +106,7 @@ represent_series <- function(code = NULL, resource = "maps", help = FALSE, nlast
       # Help
       if (help) {
         params <- c("code (serie id)", "nlast", "classification", "map_scale", "verbose", "benchmark")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): represent_series("IPC251521", resource = "maps")'))
         message(paste0('Example (extended): represent_series("IPC251521", resource = "maps", nlast = 0, classification = NULL, map_scale = 60, verbose = FALSE, benchmark = FALSE)'))
@@ -119,7 +118,7 @@ represent_series <- function(code = NULL, resource = "maps", help = FALSE, nlast
       # Help
       if (help) {
         params <- c("code (serie id)", "date_start", "date_end", "nlast", "det", "type", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): represent_series("IPC206449", resource = "plot", nlast = 5)'))
         message(paste0('Example (extended): represent_series("IPC206449", resource = "plot", date_start = NA, date_end = NA, nlast = 5, det = 0, type = "l", lang = "ES")'))
@@ -131,7 +130,7 @@ represent_series <- function(code = NULL, resource = "maps", help = FALSE, nlast
       # Help
       if (help) {
         params <- c("code (serie id)", "date_start", "date_end", "nlast", "det", "lang")
-        message(paste0('Available params for resource = ', '"', resource, '"', ' are: '))
+        message(paste0("Available params for resource = ", '"', resource, '"', " are: "))
         message(paste0("- ", params, "\n"))
         message(paste0('Example (basic): represent_series("IPC206449", resource = "highcharts", nlast = 5)'))
         message(paste0('Example (extended): represent_series("IPC206449", resource = "highcharts", date_start = NA, date_end = NA, nlast = 5, det = 0, lang = "ES")'))
@@ -147,7 +146,6 @@ represent_series <- function(code = NULL, resource = "maps", help = FALSE, nlast
   if (!help) {
     return(content)
   }
-
 }
 
 
@@ -176,7 +174,7 @@ get_geographical_variable <- function(serie) {
   for (variable_id in serie_variables_id) {
     if (variable_id %in% geographical_variables) {
       variables <- get_variables_all()
-      variable_data <- variables[variables$Id == variable_id,]
+      variable_data <- variables[variables$Id == variable_id, ]
     }
   }
 
@@ -223,29 +221,28 @@ get_natcode <- function(serie = NULL, all = TRUE, verbose = TRUE) {
   variable_id <- get_geographical_variable(serie)
 
   # Get geographical variable code
-  variable_codigo <- serie_metadata$MetaData[serie_metadata$MetaData$Variable$Id == variable_id,]$Variable$Codigo
+  variable_codigo <- serie_metadata$MetaData[serie_metadata$MetaData$Variable$Id == variable_id, ]$Variable$Codigo
 
   if (length(variable_codigo) == 0) {
     variables <- get_variables_all()
     if (verbose) {
-      message(paste0("WARNING: maybe serie ", serie, ", has not this geograhpical granularity (", variables[variables$Id == variable_id,]$Nombre, ")"))
+      message(paste0("WARNING: maybe serie ", serie, ", has not this geograhpical granularity (", variables[variables$Id == variable_id, ]$Nombre, ")"))
     }
 
     natcode <- paste0(natcode, "00", "00", "00", "000")
     return(natcode)
-
   }
 
-  variable_id <- serie_metadata$MetaData[serie_metadata$MetaData$Variable$Id == variable_id,]$Codigo
+  variable_id <- serie_metadata$MetaData[serie_metadata$MetaData$Variable$Id == variable_id, ]$Codigo
 
   # Some variables has no code, for example: serie DPOP36914
-  if ((variable_id == "") || (length(variable_id) == 0)){
+  if ((variable_id == "") || (length(variable_id) == 0)) {
     variable_id <- "00000"
   }
 
   # Provincias
   if (variable_codigo == "PROV") {
-    lista_ccaa <- natcode_df[natcode_df$CPRO == as.numeric(variable_id),]$CODAUTO
+    lista_ccaa <- natcode_df[natcode_df$CPRO == as.numeric(variable_id), ]$CODAUTO
     cod_ccaa <- unique(lista_ccaa)
 
     if (length(cod_ccaa) > 1) {
@@ -258,22 +255,20 @@ get_natcode <- function(serie = NULL, all = TRUE, verbose = TRUE) {
     }
 
     natcode <- paste0(natcode, cod_ccaa, variable_id, "00", "000")
-
   } else {
     # Comunidades autónomas
     if (variable_codigo == "CCAA") {
       cod_ccaa <- variable_id
       natcode <- paste0(natcode, cod_ccaa, "00", "00", "000")
-    # Municipios
+      # Municipios
     } else {
-
       cod_prov <- strsplit(as.character(variable_id), "")[[1]][1:2]
-      cod_prov <- paste(cod_prov, collapse = '')
+      cod_prov <- paste(cod_prov, collapse = "")
 
       cod_mun <- strsplit(as.character(variable_id), "")[[1]][3:5]
-      cod_mun <- paste(cod_mun, collapse = '')
+      cod_mun <- paste(cod_mun, collapse = "")
 
-      lista_ccaa <- natcode_df[natcode_df$CPRO == as.numeric(cod_prov) & natcode_df$CMUN == as.numeric(cod_mun),]$CODAUTO
+      lista_ccaa <- natcode_df[natcode_df$CPRO == as.numeric(cod_prov) & natcode_df$CMUN == as.numeric(cod_mun), ]$CODAUTO
       cod_ccaa <- unique(lista_ccaa)
 
       if (length(cod_ccaa) > 1) {
@@ -293,12 +288,10 @@ get_natcode <- function(serie = NULL, all = TRUE, verbose = TRUE) {
 
 
       natcode <- paste0(natcode, cod_ccaa, cod_prov, cod_prov, cod_mun)
-
     }
   }
 
   return(natcode)
-
 }
 
 
@@ -328,11 +321,11 @@ convert_natcode_to_geocode <- function(natcode = NULL, geocode = NULL, exponenti
 
   # Convert natcode to/from geocode
   if ((!is.null(natcode)) && (is.null(geocode))) {
-      code <- data[data$natcode == natcode,]$geocode
-      code <- as.character(code)
+    code <- data[data$natcode == natcode, ]$geocode
+    code <- as.character(code)
   } else {
     if ((is.null(natcode)) && (!is.null(geocode))) {
-      code <- data[data$geocode == geocode,]$natcode
+      code <- data[data$geocode == geocode, ]$natcode
     }
   }
 
@@ -396,8 +389,8 @@ draw_serie <- function(serie, nult = 0, classification = NULL, map_scale = 60, v
     }
 
     # Get serie data
-    #serie_data <- get_data_serie(serie, det = 2, nult = nult)
-    #serie_data <- get_data_serie(series[i], det = 2, nult = 1)
+    # serie_data <- get_data_serie(serie, det = 2, nult = nult)
+    # serie_data <- get_data_serie(series[i], det = 2, nult = 1)
     serie_data <- get_series(series[i], resource = "data", nlast = 1, det = 2)
 
     # Get natcode
@@ -413,7 +406,6 @@ draw_serie <- function(serie, nult = 0, classification = NULL, map_scale = 60, v
         data$geocode <- rbind(data$geocode, convert_natcode_to_geocode(natcode = serie_natcode))
       }
     }
-
   }
 
   # Conert to data frame
@@ -440,7 +432,7 @@ draw_serie <- function(serie, nult = 0, classification = NULL, map_scale = 60, v
   # Get geographical variable id
   variable_id <- get_geographical_variable(serie)
   # Get geographical variable code
-  variable_codigo <- serie_metadata$MetaData[serie_metadata$MetaData$Variable$Id == variable_id,]$Variable$Codigo
+  variable_codigo <- serie_metadata$MetaData[serie_metadata$MetaData$Variable$Id == variable_id, ]$Variable$Codigo
 
   if (variable_codigo == "PROV") {
     geographical_granularity <- "provincias"
@@ -484,7 +476,7 @@ draw_serie <- function(serie, nult = 0, classification = NULL, map_scale = 60, v
   hc <- highchart(type = "map") %>%
     hc_chart(backgroundColor = "#ffffff", zoomType = "xy") %>%
     hc_mapNavigation(enabled = TRUE) %>%
-    hc_colorAxis(min = min(data$value), max = max(data$value), type = 'logarithmic') %>%
+    hc_colorAxis(min = min(data$value), max = max(data$value), type = "logarithmic") %>%
     hc_title(text = operation_name) %>%
     hc_subtitle(text = serie_name) %>%
     hc_add_series(
@@ -493,7 +485,7 @@ draw_serie <- function(serie, nult = 0, classification = NULL, map_scale = 60, v
       showInLegend = FALSE,
       borderWidth = 0,
       keys = c("name", "value", joinby),
-      name = serie_metadata$MetaData[serie_metadata$MetaData$Variable$Id == variable_id,]$Variable$Nombre,
+      name = serie_metadata$MetaData[serie_metadata$MetaData$Variable$Id == variable_id, ]$Variable$Nombre,
       joinBy = joinby,
       dataLabels = list(enabled = TRUE, format = properties_name),
       tooltip = list(pointFormat = paste0(properties_name, ": <b>{point.value}</b> (", serie_metadata$Unidad$Nombre, ")"))
@@ -506,7 +498,6 @@ draw_serie <- function(serie, nult = 0, classification = NULL, map_scale = 60, v
   }
 
   return(hc)
-
 }
 
 
@@ -543,8 +534,7 @@ get_operations_by_granularity <- function(geographical_granularity = NULL, tempo
 
       # Geographical and temporal granularity
       if ((!is.null(geographical_granularity)) && (!is.null(temporal_granularity))) {
-
-        series <- get_series_operation(operation)
+        series <- get_series_operation_api(operation)
         variables <- get_variables_operation(operation)
 
         if ("Nombre" %in% names(series)) {
@@ -560,9 +550,9 @@ get_operations_by_granularity <- function(geographical_granularity = NULL, tempo
         }
 
 
-      # Temporal granularity
+        # Temporal granularity
       } else if ((is.null(geographical_granularity)) && (!is.null(temporal_granularity))) {
-        series <- get_series_operation(operation)
+        series <- get_series_operation_api(operation)
         # Check if column "Nombre" exists
         if ("Nombre" %in% names(series)) {
           if (temporal_granularity %in% series$Periodicidad) {
@@ -574,7 +564,7 @@ get_operations_by_granularity <- function(geographical_granularity = NULL, tempo
           }
         }
 
-      # Geographical granularity
+        # Geographical granularity
       } else if ((!is.null(geographical_granularity)) && (is.null(temporal_granularity))) {
         variables <- get_variables_operation(operation)
         if (!is.null(variables$Codigo)) {
@@ -591,7 +581,6 @@ get_operations_by_granularity <- function(geographical_granularity = NULL, tempo
   }
 
   return(operations)
-
 }
 
 # Get series by granularity (Private)
@@ -614,7 +603,7 @@ get_series_by_granularity <- function(operation, geographical_granularity = NULL
     if ((!is.null(geographical_granularity)) && (!is.null(temporal_granularity))) {
 
       # Get geographical variable code: PROV, MUN, CCAA
-      code <- serie_metadata$MetaData[serie_metadata$MetaData$Variable$Codigo == geographical_granularity,]$Variable$Codigo
+      code <- serie_metadata$MetaData[serie_metadata$MetaData$Variable$Codigo == geographical_granularity, ]$Variable$Codigo
 
       # Get temporal variable: Mensual, Anual ...
       periodicity <- serie_metadata$Periodicidad$Nombre
@@ -623,28 +612,26 @@ get_series_by_granularity <- function(operation, geographical_granularity = NULL
         if ((code == geographical_granularity) && (periodicity == temporal_granularity)) {
           series_list <- c(series_list, serie)
           if (verbose) {
-            print(paste0("Found (", geographical_granularity, " and ", temporal_granularity, ") in serie: ", serie, " > ", series[series$COD == serie,]$Nombre))
+            print(paste0("Found (", geographical_granularity, " and ", temporal_granularity, ") in serie: ", serie, " > ", series[series$COD == serie, ]$Nombre))
           }
         }
       }
-
     } else {
 
       # Geographical granularity
       if (!is.null(geographical_granularity)) {
 
         # Get geographical variable code: PROV, MUN, CCAA
-        code <- serie_metadata$MetaData[serie_metadata$MetaData$Variable$Codigo == geographical_granularity,]$Variable$Codigo
+        code <- serie_metadata$MetaData[serie_metadata$MetaData$Variable$Codigo == geographical_granularity, ]$Variable$Codigo
 
         if (length(code) > 0) {
           if (code == geographical_granularity) {
             series_list <- c(series_list, serie)
             if (verbose) {
-              print(paste0("Found (", geographical_granularity, ") in serie: ", serie, " > ", series[series$COD == serie,]$Nombre))
+              print(paste0("Found (", geographical_granularity, ") in serie: ", serie, " > ", series[series$COD == serie, ]$Nombre))
             }
           }
         }
-
       } else {
         # Temporal granularity
         if (!is.null(temporal_granularity)) {
@@ -653,18 +640,15 @@ get_series_by_granularity <- function(operation, geographical_granularity = NULL
           if (periodicity == temporal_granularity) {
             series_list <- c(series_list, serie)
             if (verbose) {
-              print(paste0("Found (", temporal_granularity, ") in serie: ", serie, " > ", series[series$COD == serie,]$Nombre))
+              print(paste0("Found (", temporal_granularity, ") in serie: ", serie, " > ", series[series$COD == serie, ]$Nombre))
             }
           }
         }
       }
-
     }
-
   }
 
   return(series_list)
-
 }
 
 
@@ -678,7 +662,7 @@ get_series_by_common_parameters <- function(serie, classification = NULL, verbos
 
 
   # Get serie metadata
-  #serie_metadata <- get_series(serie, det = 2, tip = "M")
+  # serie_metadata <- get_series(serie, det = 2, tip = "M")
   serie_metadata <- get_series(serie, resource = "metadata", det = 2, tip = "M", lang = "ES")
 
   # Get classification name
@@ -688,7 +672,6 @@ get_series_by_common_parameters <- function(serie, classification = NULL, verbos
     if (i > 1) {
       name <- paste0(name, name_splited[i], ". ")
     }
-
   }
 
   message(paste0("Getting series for '", name, "' ..."))
@@ -714,9 +697,9 @@ get_series_by_common_parameters <- function(serie, classification = NULL, verbos
   }
 
   # Get geographical varaibles
-  geographical_name <- serie_metadata$MetaData$Variable[serie_metadata$MetaData$Variable$Id == geographical_id,]$Nombre
-  geographical_code <- serie_metadata$MetaData$Variable[serie_metadata$MetaData$Variable$Id == geographical_id,]$Codigo
-  message(paste0("Note: serie ", serie," has '", geographical_name, " (", geographical_code, ")' as geographical granularity."))
+  geographical_name <- serie_metadata$MetaData$Variable[serie_metadata$MetaData$Variable$Id == geographical_id, ]$Nombre
+  geographical_code <- serie_metadata$MetaData$Variable[serie_metadata$MetaData$Variable$Id == geographical_id, ]$Codigo
+  message(paste0("Note: serie ", serie, " has '", geographical_name, " (", geographical_code, ")' as geographical granularity."))
 
   # Get series operation
   series <- get_series(operacion, resource = "operation")
@@ -724,14 +707,14 @@ get_series_by_common_parameters <- function(serie, classification = NULL, verbos
   # Autoselect classification if is NULL
   if (is.null(classification)) {
     # If there is more than one classification for this serie
-    if (nrow(series[series$Nombre == serie_metadata$Nombre,]) > 1) {
-      list_classification <- series[series$Nombre == serie_metadata$Nombre,]
+    if (nrow(series[series$Nombre == serie_metadata$Nombre, ]) > 1) {
+      list_classification <- series[series$Nombre == serie_metadata$Nombre, ]
       # Get the last classification
-      classification <- list_classification[nrow(list_classification),]$Clasificacion
+      classification <- list_classification[nrow(list_classification), ]$Clasificacion
       message(paste0("Note: we've found more of one classification in serie ", serie, ", but we've selected the last classification (", classification, ") for you"))
     } else {
       # If there is only one classification for this serie
-      classification <- series[series$Nombre == serie_metadata$Nombre,]
+      classification <- series[series$Nombre == serie_metadata$Nombre, ]
     }
   }
 
@@ -740,7 +723,6 @@ get_series_by_common_parameters <- function(serie, classification = NULL, verbos
 
   # Get series
   for (i in 1:nrow(series)) {
-
     if (grepl(pattern = name, x = series$Nombre[i])) {
 
       # Nota: si da problemas -> revisar MetaData o Metadata
@@ -756,7 +738,7 @@ get_series_by_common_parameters <- function(serie, classification = NULL, verbos
       variable_data <- NULL
       for (variable_id in serie_variables_id) {
         if (variable_id %in% geographical_variables) {
-          variable_data <- variables[variables$Id == variable_id,]
+          variable_data <- variables[variables$Id == variable_id, ]
         }
       }
 
@@ -771,7 +753,7 @@ get_series_by_common_parameters <- function(serie, classification = NULL, verbos
           }
         }
 
-      # Classification found
+        # Classification found
       } else {
         if (!is.null(variable_id)) {
 
@@ -784,7 +766,7 @@ get_series_by_common_parameters <- function(serie, classification = NULL, verbos
               }
             }
 
-          # If there is classification
+            # If there is classification
           } else {
             if ((variable_id == geographical_id) && (series$Clasificacion[i] == classification)) {
               series_list <- c(series_list, series$COD[i])
@@ -793,17 +775,13 @@ get_series_by_common_parameters <- function(serie, classification = NULL, verbos
               }
             }
           }
-
         }
-        #else {
+        # else {
         #  print(paste0("No se han encontrado coincidencias geográficas en esta serie"))
-        #}
-
+        # }
       }
-
     }
   }
 
   return(series_list)
-
 }
