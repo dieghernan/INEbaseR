@@ -99,12 +99,818 @@ Possible values are <code>all, metadata, variables_values or by_granularity</cod
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_operations</span><span class="op">(</span><span class="op">)</span>
-<span class="fu">get_operations</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span>
-<span class="fu">get_operations</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"all"</span>, help <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu">get_operations</span><span class="op">(</span><span class="st">"IPC"</span>, resource <span class="op">=</span> <span class="st">"metadata"</span><span class="op">)</span>
-<span class="fu">get_operations</span><span class="op">(</span><span class="st">"IPC"</span>, resource <span class="op">=</span> <span class="st">"variables_values"</span><span class="op">)</span>
-<span class="fu">get_operations</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"by_granularity"</span>, geographical_granularity <span class="op">=</span> <span class="st">"PROV"</span><span class="op">)</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">get_operations</span><span class="op">(</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     Id Cod_IOE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    4   30147</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    6   30211</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    7   30168</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   10   30256</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   13   30219</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   14   30182</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   15   30457</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   16        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   18   30180</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  20   30013</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11  21   30259</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12  22   30245</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13  23   30417</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  24   30048</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15  25   30138</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16  26   30050</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17  27   30051</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18  30        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19  31   30183</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20  32   30103</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21  33   30264</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22  35        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23  36        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24  39   30162</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25  40   30149</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26  41   30053</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27  42   30052</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28  43   30203</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29  44   30198</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30  48   30071</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31  49        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32  51   30019</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33  52   30269</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34  54   30270</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35  61   30222</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36  62   30223</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37  63   30229</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38  66   30463</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39  71   30277</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40  72   30321</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41  93   30049</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42 104   30062</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43 121   30133</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44 125   30151</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45 130   30177</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46 132   30179</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47 137   30185</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48 139   30188</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49 140   30189</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50 155   30453</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51 163   30199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52 171   30221</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53 180   30230</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54 197   30271</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55 205   30310</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56 212   30465</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57 213   30466</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58 214   30467</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59 215   30468</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60 234   30209</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61 237   30024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62 238   30235</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63 239   30236</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64 240   30237</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65 241   30238</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66 246   30026</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67 247   30023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68 249   30063</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69 254   30220</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70 256   30232</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71 258   30083</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72 259   30153</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73 293   30308</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74 297   30163</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75 303   30187</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76 305   30302</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77 307   30304</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78 309   30306</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79 314   30458</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80 328   30239</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81 329   16029</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82 330   16028</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83 331        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84 333   30456</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85 334   16023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86 336   30279</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87 345   30030</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88 353        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89 402        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90 406   30324</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91 407        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92 410        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93 412        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94 424   30323</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95 425        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96 426        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97 429        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98 432        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99 433        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                Nombre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                        Estadística de Efectos de Comercio Impagados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                  Índice de Coste Laboral Armonizado</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                              Estadística de Transmisión de Derechos de la Propiedad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                                                 Indicadores Urbanos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                                             Estadística del Procedimiento Concursal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                                             Índices de Precios del Sector Servicios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                              Índice de Precios de la Vivienda (IPV)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                                                             Distribución de Nombres</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                      Índice de Precios de Consumo Armonizado (IPCA)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                              Contabilidad Nacional Trimestral de España. Base 2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                                        Estimaciones de la Población Actual (ePOBa)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12           Cifras Oficiales de Población de los Municipios Españoles: Revisión del Padrón Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                                Estadística de Defunciones según la Causa de Muerte</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                             Estadística Estructural de Empresas: Sector Industrial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                                                                 Índice de Precios de Consumo (IPC)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                                                                   Índices de Producción Industrial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                                                                    Índices de Precios Industriales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                                          Encuesta de coyuntura de comercio al por menor. Base 1994</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                                                      Indicadores de Actividad del Sector Servicios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20                                                                   Índices de Comercio al por Menor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                                                                   Indicadores Demográficos Básicos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22    Poblaciones de hecho desde 1900 hasta 1991. Cifras oficiales sacadas de los Censos respectivos.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23                 Poblaciones de derecho desde 1986 hasta 1995. Cifras oficiales sacadas del Padrón.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24                                                   Encuesta de Ocupación en Alojamientos Turísticos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25                                                                           Estadística de Hipotecas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26                                                                     Índices de Entradas de Pedidos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27                                                      Índices de Cifras de Negocios en la Industria</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28                                         Explotación Estadística del Directorio Central de Empresas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29             Encuesta sobre Comercio Internacional de Servicios y otras Operaciones Internacionales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30                       Índices de Precios de Exportación y de Importación de Productos Industriales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31                                                                          Distribución de Apellidos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32                                              Contabilidad Nacional Trimestral de España. Base 2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33                                                            Proyecciones de Población a Corto Plazo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34                                                            Proyecciones de Población a Largo Plazo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35                                                       Índice de Precios de Apartamentos Turísticos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36                                                                       Índice de Precios de Camping</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37                                                 Índice de Precios de Alojamientos de Turismo Rural</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38                                                 Estadística de Nulidades, Separaciones y Divorcios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39                                                                         Estadística de Migraciones</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40                                                                                Cifras de Población</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41                                                             Encuesta Industrial Anual de Productos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42                 Índices de Precios de Materiales y Energía e Índices Nacionales de la Mano de Obra</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43                                                         Encuesta Cuatrienal de Estructura Salarial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44                                                              Estadística de Sociedades Mercantiles</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45                                              Estadística Estructural de Empresas: Sector Servicios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46                                                                        Índice de Precios Hoteleros</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47                                                                      Índice de Precios del Trabajo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48                                                                    Encuesta Anual de Coste Laboral</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49                                                              Encuesta Anual de Estructura Salarial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50                                                              Encuesta de Condiciones de Vida (ECV)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51                                                               Indicadores de Confianza Empresarial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52                                                           Estadística sobre Transporte Ferroviario</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53                                                    Indicadores de Rentabilidad del Sector Hotelero</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54                                                                               Tablas de Mortalidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55                                                                      Flujos de la Población Activa</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56                                                                     Estadística de Juzgados de Paz</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57                                                                 Estadística de Condenados: Adultos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58                                                                 Estadística de Condenados: Menores</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59                                           Estadística de Violencia Doméstica y Violencia de Género</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60                                                      Estadística de Movilidad Laboral y Geográfica</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61                                  Contabilidad Nacional Trimestral de España: Principales Agregados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62                                                                     Encuesta de Ocupación Hotelera</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63                                                   Encuesta de Ocupación en Apartamentos Turísticos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64                                                                  Encuesta de Ocupación en Campings</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65                                             Encuesta de Ocupación en Alojamientos de Turismo Rural</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66                                Cuentas Trimestrales no Financieras de los Sectores Institucionales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67                                                         Contabilidad Nacional de España. Base 2010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68                                                     Encuesta Coyuntural sobre Stocks y Existencias</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69                                                                       Índice de ingresos hoteleros</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70                                               Estadística Estructural de Empresas: Sector Comercio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71                                                            Índice de Cifra de Negocios Empresarial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72                                                         Estadística sobre Ejecuciones Hipotecarias</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73                                                                 Encuesta de Población Activa (EPA)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74                                                              Estadística de Transporte de Viajeros</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75                                                        Encuesta Trimestral de Coste Laboral (ETCL)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76                                                                     MNP Estadística de Matrimonios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77                                                                     MNP Estadística de Nacimientos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78                                                                     MNP Estadística de Defunciones</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79                                                          Encuesta de Presupuestos Familiares (EPF)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80                                                                 Encuesta de Ocupación en Albergues</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81                                                                        Encuesta de Gasto Turístico</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82                                                                Movimientos Turísticos en Fronteras</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83                                                            Índice de Garantía de la Competitividad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84                                                                        Mujeres y Hombres en España</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85                                                                  Encuesta de turismo de residentes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86                                Estadística de Adquisiciones de Nacionalidad Española de Residentes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87                             Contabilidad nacional anual de España: agregados por rama de actividad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88                                                      Atlas de Distribución de Renta de los Hogares</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89                                                                                  Movilidad COVID19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90                                              Estimacion del numero de defunciones semanales (EDeS)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91                                                        Encuesta Cuatrienal de Estructural Salarial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92                                                                     Viviendas turísticas en España</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93 Distribución del gasto en destino realizado por los visitantes extranjeros en sus visitas a España</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94                                                                  Estimación Mensual de Nacimientos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95                                                   Comercio diario al por menor de grandes empresas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96                                                                  Coyuntura demográfica de empresas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97                                                               Ocupación en alojamientos turísticos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98                                                          Índice de Precios de Vivienda en Alquiler</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99                                                      Indicador Multidimensional de Calidad de Vida</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      Codigo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1        EI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2      ICLA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      ETDP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4        UA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       EPC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6       IPS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7       IPV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8      TNOM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9      IPCA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 CNTR2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11    EPOBA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12     DPOP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13      ECM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  EEE:IND</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15      IPC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16      IPI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17     IPRI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18      CCM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19      IAS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20      ICM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21      IDB</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22     DPOH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23     DPOD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24      EOT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25      HPT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26      IEP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27      ICN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28      DIR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29     ICES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30   IPRX-M</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31     APEL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32 CNTR2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33    EPOBC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34    EPOBL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35     IPAP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36     IPAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37     IPTR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38     ENSD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39       EM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40       CP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41     EIAP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42      IMM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43   EAES:Q</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44       SM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45  EEE:SER</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46      IPH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47      IPT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48     EACL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49     EAES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50      ECV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51      ICE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52       TF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53     IRSH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54       TM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55     EFPA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56      EJP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57     CONA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58     CONM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59      VGD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60     EMLG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61 CNTR2010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62      EOH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63     EOAP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64     EOAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65     EOTR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66   CTNFSI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67      CNE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68     ECSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69      IIH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70  EEE:COM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71     ICNE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72       EH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73      EPA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74       TV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75     ETCL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76     MNPM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77     MNPN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78     MNPD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79      EPF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80      EOA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81       EG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82       FR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83      IGC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84      MYH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85      ETR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86     ANES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87    CNEAG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88     ADRH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89     MMOV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90     EDES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91   EAES:Q</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92      VTE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93     GDVE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94      EMN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95    CDMGE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96    CODEM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97      OAT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98     IPVA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99     IMCV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                      Url</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736177009&amp;menu=ultiDatos&amp;idp=1254734710990</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31  https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736177009&amp;menu=ultiDatos&amp;idp=1254734710990</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83 https://www.ine.es/ss/Satellite?c=Page&amp;cid=1259947704944&amp;pagename=ProductosYServicios%2FPYSLayout&amp;L=0&amp;p=1254735893337</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88                                                          https://www.ine.es/experimental/atlas/experimental_atlas.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89                                                         https://www.ine.es/experimental/movilidad/experimental_em.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90                                              https://www.ine.es/experimental/defunciones/experimental_defunciones.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92                                          https://www.ine.es/experimental/viv_turistica/experimental_viv_turistica.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93                                                         https://www.ine.es/experimental/gasto_tarjetas/trimestral.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94                                              https://www.ine.es/experimental/nacimientos/experimental_nacimientos.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95                                                                                https://www.ine.es/experimental/cdmge/</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96                                                          https://www.ine.es/experimental/codem/experimental_codem.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99                                          https://www.ine.es/experimental/imcv/experimental_ind_multi_calidad_vida.htm</span>
+<span class="r-in"><span class="fu">get_operations</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     Id Cod_IOE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    4   30147</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    6   30211</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    7   30168</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   10   30256</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   13   30219</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   14   30182</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   15   30457</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   16        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   18   30180</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  20   30013</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11  21   30259</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12  22   30245</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13  23   30417</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  24   30048</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15  25   30138</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16  26   30050</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17  27   30051</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18  30        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19  31   30183</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20  32   30103</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21  33   30264</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22  35        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23  36        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24  39   30162</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25  40   30149</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26  41   30053</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27  42   30052</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28  43   30203</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29  44   30198</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30  48   30071</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31  49        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32  51   30019</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33  52   30269</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34  54   30270</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35  61   30222</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36  62   30223</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37  63   30229</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38  66   30463</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39  71   30277</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40  72   30321</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41  93   30049</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42 104   30062</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43 121   30133</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44 125   30151</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45 130   30177</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46 132   30179</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47 137   30185</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48 139   30188</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49 140   30189</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50 155   30453</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51 163   30199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52 171   30221</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53 180   30230</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54 197   30271</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55 205   30310</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56 212   30465</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57 213   30466</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58 214   30467</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59 215   30468</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60 234   30209</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61 237   30024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62 238   30235</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63 239   30236</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64 240   30237</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65 241   30238</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66 246   30026</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67 247   30023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68 249   30063</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69 254   30220</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70 256   30232</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71 258   30083</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72 259   30153</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73 293   30308</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74 297   30163</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75 303   30187</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76 305   30302</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77 307   30304</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78 309   30306</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79 314   30458</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80 328   30239</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81 329   16029</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82 330   16028</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83 331        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84 333   30456</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85 334   16023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86 336   30279</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87 345   30030</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88 353        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89 402        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90 406   30324</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91 407        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92 410        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93 412        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94 424   30323</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95 425        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96 426        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97 429        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98 432        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99 433        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                Nombre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                        Estadística de Efectos de Comercio Impagados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                  Índice de Coste Laboral Armonizado</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                              Estadística de Transmisión de Derechos de la Propiedad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                                                 Indicadores Urbanos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                                             Estadística del Procedimiento Concursal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                                             Índices de Precios del Sector Servicios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                              Índice de Precios de la Vivienda (IPV)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                                                             Distribución de Nombres</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                      Índice de Precios de Consumo Armonizado (IPCA)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                              Contabilidad Nacional Trimestral de España. Base 2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                                        Estimaciones de la Población Actual (ePOBa)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12           Cifras Oficiales de Población de los Municipios Españoles: Revisión del Padrón Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                                Estadística de Defunciones según la Causa de Muerte</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                             Estadística Estructural de Empresas: Sector Industrial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                                                                 Índice de Precios de Consumo (IPC)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                                                                   Índices de Producción Industrial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                                                                    Índices de Precios Industriales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                                          Encuesta de coyuntura de comercio al por menor. Base 1994</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                                                      Indicadores de Actividad del Sector Servicios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20                                                                   Índices de Comercio al por Menor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                                                                   Indicadores Demográficos Básicos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22    Poblaciones de hecho desde 1900 hasta 1991. Cifras oficiales sacadas de los Censos respectivos.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23                 Poblaciones de derecho desde 1986 hasta 1995. Cifras oficiales sacadas del Padrón.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24                                                   Encuesta de Ocupación en Alojamientos Turísticos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25                                                                           Estadística de Hipotecas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26                                                                     Índices de Entradas de Pedidos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27                                                      Índices de Cifras de Negocios en la Industria</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28                                         Explotación Estadística del Directorio Central de Empresas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29             Encuesta sobre Comercio Internacional de Servicios y otras Operaciones Internacionales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30                       Índices de Precios de Exportación y de Importación de Productos Industriales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31                                                                          Distribución de Apellidos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32                                              Contabilidad Nacional Trimestral de España. Base 2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33                                                            Proyecciones de Población a Corto Plazo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34                                                            Proyecciones de Población a Largo Plazo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35                                                       Índice de Precios de Apartamentos Turísticos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36                                                                       Índice de Precios de Camping</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37                                                 Índice de Precios de Alojamientos de Turismo Rural</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38                                                 Estadística de Nulidades, Separaciones y Divorcios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39                                                                         Estadística de Migraciones</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40                                                                                Cifras de Población</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41                                                             Encuesta Industrial Anual de Productos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42                 Índices de Precios de Materiales y Energía e Índices Nacionales de la Mano de Obra</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43                                                         Encuesta Cuatrienal de Estructura Salarial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44                                                              Estadística de Sociedades Mercantiles</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45                                              Estadística Estructural de Empresas: Sector Servicios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46                                                                        Índice de Precios Hoteleros</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47                                                                      Índice de Precios del Trabajo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48                                                                    Encuesta Anual de Coste Laboral</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49                                                              Encuesta Anual de Estructura Salarial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50                                                              Encuesta de Condiciones de Vida (ECV)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51                                                               Indicadores de Confianza Empresarial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52                                                           Estadística sobre Transporte Ferroviario</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53                                                    Indicadores de Rentabilidad del Sector Hotelero</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54                                                                               Tablas de Mortalidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55                                                                      Flujos de la Población Activa</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56                                                                     Estadística de Juzgados de Paz</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57                                                                 Estadística de Condenados: Adultos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58                                                                 Estadística de Condenados: Menores</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59                                           Estadística de Violencia Doméstica y Violencia de Género</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60                                                      Estadística de Movilidad Laboral y Geográfica</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61                                  Contabilidad Nacional Trimestral de España: Principales Agregados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62                                                                     Encuesta de Ocupación Hotelera</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63                                                   Encuesta de Ocupación en Apartamentos Turísticos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64                                                                  Encuesta de Ocupación en Campings</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65                                             Encuesta de Ocupación en Alojamientos de Turismo Rural</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66                                Cuentas Trimestrales no Financieras de los Sectores Institucionales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67                                                         Contabilidad Nacional de España. Base 2010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68                                                     Encuesta Coyuntural sobre Stocks y Existencias</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69                                                                       Índice de ingresos hoteleros</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70                                               Estadística Estructural de Empresas: Sector Comercio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71                                                            Índice de Cifra de Negocios Empresarial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72                                                         Estadística sobre Ejecuciones Hipotecarias</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73                                                                 Encuesta de Población Activa (EPA)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74                                                              Estadística de Transporte de Viajeros</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75                                                        Encuesta Trimestral de Coste Laboral (ETCL)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76                                                                     MNP Estadística de Matrimonios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77                                                                     MNP Estadística de Nacimientos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78                                                                     MNP Estadística de Defunciones</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79                                                          Encuesta de Presupuestos Familiares (EPF)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80                                                                 Encuesta de Ocupación en Albergues</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81                                                                        Encuesta de Gasto Turístico</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82                                                                Movimientos Turísticos en Fronteras</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83                                                            Índice de Garantía de la Competitividad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84                                                                        Mujeres y Hombres en España</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85                                                                  Encuesta de turismo de residentes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86                                Estadística de Adquisiciones de Nacionalidad Española de Residentes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87                             Contabilidad nacional anual de España: agregados por rama de actividad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88                                                      Atlas de Distribución de Renta de los Hogares</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89                                                                                  Movilidad COVID19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90                                              Estimacion del numero de defunciones semanales (EDeS)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91                                                        Encuesta Cuatrienal de Estructural Salarial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92                                                                     Viviendas turísticas en España</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93 Distribución del gasto en destino realizado por los visitantes extranjeros en sus visitas a España</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94                                                                  Estimación Mensual de Nacimientos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95                                                   Comercio diario al por menor de grandes empresas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96                                                                  Coyuntura demográfica de empresas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97                                                               Ocupación en alojamientos turísticos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98                                                          Índice de Precios de Vivienda en Alquiler</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99                                                      Indicador Multidimensional de Calidad de Vida</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      Codigo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1        EI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2      ICLA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      ETDP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4        UA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       EPC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6       IPS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7       IPV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8      TNOM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9      IPCA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 CNTR2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11    EPOBA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12     DPOP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13      ECM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  EEE:IND</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15      IPC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16      IPI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17     IPRI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18      CCM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19      IAS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20      ICM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21      IDB</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22     DPOH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23     DPOD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24      EOT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25      HPT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26      IEP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27      ICN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28      DIR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29     ICES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30   IPRX-M</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31     APEL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32 CNTR2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33    EPOBC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34    EPOBL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35     IPAP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36     IPAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37     IPTR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38     ENSD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39       EM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40       CP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41     EIAP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42      IMM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43   EAES:Q</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44       SM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45  EEE:SER</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46      IPH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47      IPT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48     EACL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49     EAES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50      ECV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51      ICE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52       TF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53     IRSH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54       TM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55     EFPA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56      EJP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57     CONA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58     CONM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59      VGD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60     EMLG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61 CNTR2010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62      EOH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63     EOAP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64     EOAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65     EOTR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66   CTNFSI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67      CNE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68     ECSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69      IIH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70  EEE:COM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71     ICNE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72       EH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73      EPA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74       TV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75     ETCL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76     MNPM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77     MNPN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78     MNPD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79      EPF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80      EOA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81       EG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82       FR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83      IGC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84      MYH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85      ETR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86     ANES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87    CNEAG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88     ADRH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89     MMOV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90     EDES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91   EAES:Q</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92      VTE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93     GDVE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94      EMN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95    CDMGE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96    CODEM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97      OAT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98     IPVA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99     IMCV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                      Url</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736177009&amp;menu=ultiDatos&amp;idp=1254734710990</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                                                                                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31  https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736177009&amp;menu=ultiDatos&amp;idp=1254734710990</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83 https://www.ine.es/ss/Satellite?c=Page&amp;cid=1259947704944&amp;pagename=ProductosYServicios%2FPYSLayout&amp;L=0&amp;p=1254735893337</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88                                                          https://www.ine.es/experimental/atlas/experimental_atlas.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89                                                         https://www.ine.es/experimental/movilidad/experimental_em.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90                                              https://www.ine.es/experimental/defunciones/experimental_defunciones.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92                                          https://www.ine.es/experimental/viv_turistica/experimental_viv_turistica.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93                                                         https://www.ine.es/experimental/gasto_tarjetas/trimestral.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94                                              https://www.ine.es/experimental/nacimientos/experimental_nacimientos.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95                                                                                https://www.ine.es/experimental/cdmge/</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96                                                          https://www.ine.es/experimental/codem/experimental_codem.htm</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98                                                                                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99                                          https://www.ine.es/experimental/imcv/experimental_ind_multi_calidad_vida.htm</span>
+<span class="r-in"><span class="fu">get_operations</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"all"</span>, help <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Available params for resource = "all" are: </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> - lang</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Example (basic): get_operations()</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Example (extended): get_operations(resource = "all", lang = "ES")</span>
+<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
+<span class="r-in"><span class="fu">get_operations</span><span class="op">(</span><span class="st">"IPC"</span>, resource <span class="op">=</span> <span class="st">"metadata"</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">get_operations</span><span class="op">(</span><span class="st">"IPC"</span>, resource <span class="op">=</span> <span class="st">"variables_values"</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">get_operations</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"by_granularity"</span>, geographical_granularity <span class="op">=</span> <span class="st">"PROV"</span><span class="op">)</span></span>
+<span class="r-in"><span class="op">}</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

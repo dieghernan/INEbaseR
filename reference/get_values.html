@@ -94,9 +94,116 @@ Possible values are <code>all or variable_operation</code></p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_values</span><span class="op">(</span><span class="fl">115</span><span class="op">)</span>
-<span class="fu">get_values</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"all"</span>, help <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu">get_values</span><span class="op">(</span><span class="fl">762</span>, operation <span class="op">=</span> <span class="st">"IPC"</span>, resource <span class="op">=</span> <span class="st">"variable_operation"</span><span class="op">)</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">get_values</span><span class="op">(</span><span class="fl">115</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        Id Fk_Variable                       Nombre Codigo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1       2         115                  Araba/Álava     01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2       3         115                     Albacete     02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3       4         115             Alicante/Alacant     03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4       5         115                      Almería     04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       6         115                        Ávila     05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6       7         115                      Badajoz     06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7       8         115               Balears, Illes     07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8       9         115                    Barcelona     08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9      10         115                       Burgos     09</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10     11         115                      Cáceres     10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11     12         115                        Cádiz     11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12     13         115           Castellón/Castelló     12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13     14         115                  Ciudad Real     13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14     15         115                      Córdoba     14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15     16         115                    Coruña, A     15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16     17         115                       Cuenca     16</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17     18         115                       Girona     17</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18     19         115                      Granada     18</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19     20         115                  Guadalajara     19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20     21         115                     Gipuzkoa     20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21     22         115                       Huelva     21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22     23         115                       Huesca     22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23     24         115                         Jaén     23</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24     25         115                         León     24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25     26         115                       Lleida     25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26     27         115                    Rioja, La     26</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27     28         115                         Lugo     27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28     29         115                       Madrid     28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29     30         115                       Málaga     29</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30     31         115                       Murcia     30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31     32         115                      Navarra     31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32     33         115                     Asturias     33</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33     34         115                     Palencia     34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34     35         115                  Palmas, Las     35</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35     36         115                   Pontevedra     36</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36     37         115                    Salamanca     37</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37     38         115       Santa Cruz de Tenerife     38</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38     39         115                    Cantabria     39</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39     40         115                      Segovia     40</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40     41         115                      Sevilla     41</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41     42         115                        Soria     42</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42     43         115                    Tarragona     43</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43     44         115                       Teruel     44</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44     45         115                       Toledo     45</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45     46         115            Valencia/València     46</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46     47         115                   Valladolid     47</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47     48         115                      Bizkaia     48</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48     49         115                       Zamora     49</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49     50         115                     Zaragoza     50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50     51         115                        Ceuta     51</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51     52         115                      Melilla     52</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52     53         115                      Ourense     32</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53     68         115                   Extranjero       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54  15299         115     Total Ciudades con Metro       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55  16473         115               Total Nacional     00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56 274508         115 Total capitales de provincia  00000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57 285494         115  Otras Comunidades Autónomas       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58 291907         115         Peninsula y Baleares       </span>
+<span class="r-in"><span class="fu">get_values</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"all"</span>, help <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Available params for resource = "all" are: </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> - code (variable id)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> - det</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> - lang</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Example (basic): get_values(115)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Example (extended): get_values(115, resource = "all", det = 0, lang = "ES")</span>
+<span class="r-in"><span class="fu">get_values</span><span class="op">(</span><span class="fl">762</span>, operation <span class="op">=</span> <span class="st">"IPC"</span>, resource <span class="op">=</span> <span class="st">"variable_operation"</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        Id Fk_Variable</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  304092         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  304093         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  304094         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  304095         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  304096         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  304097         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  304098         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  304099         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  304100         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 304101         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 304102         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 304103         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 304104         762</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                Nombre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                      Índice general</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                  Alimentos y bebidas no alcohólicas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                        Bebidas alcohólicas y tabaco</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                                   Vestido y calzado</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                              Vivienda, agua, electricidad, gas y otros combustibles</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Muebles, artículos del hogar y artículos para el mantenimiento corriente del hogar</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                                             Sanidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                                                          Transporte</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                                      Comunicaciones</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                                     Ocio y cultura</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                                                          Enseñanza</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                                                             Restaurantes y hoteles</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                                          Otros bienes y servicios </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    Codigo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1      00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2      01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4      03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5      04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6      05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7      06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8      07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9      08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10     09</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11     10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12     11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13     12</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

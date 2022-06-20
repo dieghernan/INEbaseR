@@ -84,9 +84,1528 @@ Possible values are <code>all or operation</code></p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_variables</span><span class="op">(</span><span class="op">)</span>
-<span class="fu">get_variables</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"all"</span>, help <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu">get_variables</span><span class="op">(</span><span class="st">"IPC"</span>, resource <span class="op">=</span> <span class="st">"operation"</span><span class="op">)</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">get_variables</span><span class="op">(</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      Id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   349</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   954</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    70</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   955</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   115</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   956</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7    19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   601</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   599</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  600</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11  846</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12  847</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13  913</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20    7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21    8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22    9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23   10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24   11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25   12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26   16</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27   18</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28   20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29   26</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30   27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31   28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32   29</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33   30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34   31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35   33</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36   34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37   35</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38   36</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39   37</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40   46</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41   47</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42   55</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43   57</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44   64</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45   66</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46   71</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47   72</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48   73</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49   74</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50   77</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51   86</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52   88</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53   92</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54   94</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55   95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56   96</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57   97</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58  101</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59  103</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60  105</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61  106</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62  108</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63  109</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64  110</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65  111</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66  112</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67  113</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68  114</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69  116</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70  117</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71  118</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72  119</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73  120</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74  121</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75  122</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76  123</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77  124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78  125</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79  126</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80  127</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81  128</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82  129</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83  130</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84  131</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85  132</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86  133</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87  134</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88  135</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89  136</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90  137</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91  138</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92  139</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93  140</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94  141</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95  142</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96  143</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97  144</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98  145</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99  146</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 100 147</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 101 148</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 102 149</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 103 150</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 104 151</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 105 152</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 106 153</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 107 154</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 108 155</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 109 156</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 110 157</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 111 158</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 112 159</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 113 160</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 114 161</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 115 162</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 116 163</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 117 164</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 118 166</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 119 167</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 120 168</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 121 169</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 122 170</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 123 171</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 124 172</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 125 173</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 126 174</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 127 175</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 128 176</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 129 177</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 130 178</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 131 179</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132 180</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 133 181</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 134 182</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 135 183</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 136 184</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 137 185</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 138 186</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 139 187</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 140 188</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 141 189</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 142 190</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 143 191</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 144 192</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 145 193</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 146 194</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 147 195</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 148 196</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 149 197</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 150 198</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 151 199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 152 200</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 153 201</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 154 202</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 155 203</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 156 204</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157 205</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 158 206</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 159 207</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 160 208</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 161 209</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 162 210</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 163 211</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 164 212</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 165 213</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 166 214</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 167 215</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 168 216</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 169 217</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 170 218</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 171 219</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 172 220</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 173 221</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 174 222</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 175 223</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 176 224</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 177 225</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 178 229</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 179 230</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 180 233</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 181 238</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 182 239</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 183 240</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 184 241</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 185 242</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 186 243</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 187 244</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 188 245</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 189 246</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 190 247</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 191 249</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 192 255</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 193 257</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 194 258</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 195 259</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 196 260</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 197 261</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 198 264</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 199 265</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 200 266</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 201 267</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 202 268</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 203 269</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 204 270</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 205 271</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 206 272</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 207 273</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 208 274</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 209 275</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 210 276</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 211 277</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 212 278</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 213 279</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 214 280</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 215 281</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 216 282</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217 283</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 218 284</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 219 285</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 220 288</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 221 289</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 222 290</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 223 291</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 224 293</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 225 294</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 226 295</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 227 296</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 228 297</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 229 298</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 230 299</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 231 300</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 232 301</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 233 302</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 234 303</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 235 304</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 236 305</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 237 306</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 238 307</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 239 308</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 240 309</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 241 310</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 242 311</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 243 319</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 244 328</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 245 332</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 246 336</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 247 337</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 248 338</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 249 340</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 250 341</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 251 345</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 252 355</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 253 356</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 254 357</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 255 360</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 256 364</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 257 368</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 258 369</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 259 372</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 260 374</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 261 375</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 262 376</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 263 377</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 264 378</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 265 379</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 266 381</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 267 382</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 268 384</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 269 386</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 270 387</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 271 389</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 272 390</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 273 391</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 274 393</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 275 394</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 276 395</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 277 406</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 278 429</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 279 430</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 280 431</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 281 432</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 282 433</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 283 434</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 284 435</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 285 440</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 286 441</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 287 445</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 288 446</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 289 447</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 290 448</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 291 449</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 292 450</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 293 451</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 294 452</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 295 456</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 296 457</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 297 458</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 298 460</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 299 461</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 300 462</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 301 463</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 302 464</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 303 469</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 304 470</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 305 472</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 306 474</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 307 476</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 308 478</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 309 479</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 310 480</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 311 481</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 312 482</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 313 483</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 314 484</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 315 486</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 316 487</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 317 488</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 318 489</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 319 490</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 320 491</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 321 492</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 322 494</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 323 495</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 324 496</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 325 497</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 326 498</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 327 499</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 328 500</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 329 501</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 330 502</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 331 503</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 332 504</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 333 505</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 334 506</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 335 507</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 336 508</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 337 509</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 338 510</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 339 511</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 340 512</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 341 514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 342 515</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 343 516</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 344 517</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 345 518</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 346 519</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 347 520</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 348 524</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 349 525</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 350 528</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 351 529</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 352 530</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 353 533</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 354 536</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 355 538</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 356 539</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 357 542</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 358 543</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 359 544</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 360 545</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 361 546</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 362 548</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 363 549</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 364 550</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 365 551</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 366 552</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 367 553</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 368 554</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 369 555</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 370 556</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 371 557</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 372 558</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 373 559</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 374 560</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 375 561</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 376 562</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 377 563</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 378 565</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 379 567</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 380 568</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 381 571</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 382 572</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 383 574</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 384 576</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 385 577</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 386 578</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 387 579</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 388 580</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 389 581</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 390 582</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 391 583</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 392 584</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 393 585</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 394 587</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 395 588</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 396 589</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 397 590</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 398 591</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 399 592</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 400 593</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 401 594</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 402 595</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 403 596</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 404 597</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 405 598</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 406 602</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 407 604</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 408 605</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 409 606</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 410 607</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 411 608</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 412 609</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 413 611</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 414 612</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 415 613</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 416 614</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 417 615</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 418 616</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 419 617</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 420 618</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 421 619</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 422 620</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 423 621</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 424 622</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 425 625</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 426 626</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 427 628</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 428 629</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 429 630</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 430 631</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 431 632</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 432 633</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 433 634</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 434 635</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 435 636</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 436 637</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 437 638</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 438 639</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 439 640</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 440 641</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 441 642</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 442 643</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 443 644</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 444 645</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 445 646</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 446 647</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 447 648</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 448 649</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 449 650</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 450 651</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 451 652</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 452 653</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 453 654</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 454 655</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 455 656</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 456 657</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 457 658</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 458 659</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 459 660</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 460 661</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 461 663</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 462 664</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 463 665</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 464 666</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 465 667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 466 668</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 467 669</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 468 670</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 469 671</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 470 672</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 471 674</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 472 675</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 473 676</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 474 677</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 475 678</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 476 679</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 477 680</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 478 682</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 479 683</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 480 684</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 481 689</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 482 691</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 483 692</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 484 693</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 485 694</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 486 696</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 487 697</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 488 698</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 489 699</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 490 701</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 491 702</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 492 703</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 493 704</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 494 705</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 495 706</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 496 707</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 497 708</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 498 709</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 499 710</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 500 711</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                        Nombre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                       Totales Territoriales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                                       Total</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                            Comunidades y Ciudades Autónomas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                                  Cultivos, pastos y huertos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                                                                  Provincias</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                                                         SAU y Otras tierras</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                                                  Municipios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                                                                   Subciudad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                                                 Supraciudad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                                                Conurbación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                                                                  Distritos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                                                                                  Secciones</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                                                   Cría o engorde de ganado</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                                                           Tipo de comercio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                                                                        Grupos de Productos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                                                                               Tipo de dato</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                                                                                    Periodo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                                                                  Componentes PIBpm, oferta</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                                                                Componentes PIBpm, demanda </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20                                                                                Estadística</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                                                                                    Precios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22                                                          Operaciones y saldos (nacionales)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23                                                                         Ramas de actividad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24                                                                        Agregados de empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25                                                                   Componentes PIBpm, renta</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26                                                                 Rama de actividad - CNAE93</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27                                                                                       Sexo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28                                                                                      Islas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29                                              Régimen de tenenecia de la vivienda principal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30                                                               Disposición de agua caliente</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31                                          Fuente de energía utilizada para calentar el agua</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32                                                                 Disposición de calefacción</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33                                            Fuente de energía utilizada para la calefacción</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34                                   Disposición de otras viviendas distintas de la principal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35                                                                         Hogares y personas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36                                                                       Tamaño del municipio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37                                                                      Densidad de población</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38                                                                      Composición del hogar</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39                                                                              Tipo de hogar</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40                                                     Principal fuente de ingresos del hogar</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41                                      Nivel de ingresos mensuales netos regulares del hogar</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42                                                                Grupos de gasto (2 dígitos)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43         Gastos totales, medios, distribución porcentual e índices sobre la media del gasto</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44                                                               Cantidades medias consumidas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45                                                               Gasto total y valor unitario</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46                                                                                   Año Base</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47                                                             Subgrupos de gasto (3 dígitos)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48                                                               Códigos de gasto (4 dígitos)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49                                                               Códigos de gasto (5 dígitos)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50                                                       Códigos de gasto con cantidad física</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51                                                        Gastos totales y medios (monetario)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52                                                           Principales variables económicas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53                                                                             Personas/Horas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54                                                                          TIPO DE CATEGORIA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55                                                                           ZONAS TURÍSTICAS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56                                                                          RESIDENCIA/ORIGEN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57                                                                        Lugar de nacimiento</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58                                                            Forma de organización del viaje</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59                                                                          PUNTOS TURISTÍCOS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60                                                                                    TARIFAS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61                                                                    MODALIDADES DE ALQUILER</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62                                          Ocupados en cada encuesta e índice de cambio neto</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63                                           Parados en cada encuesta e índice de cambio neto</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64                                                                Rama de actividad CNAE 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65                                             Rama de actividad (empleo principal) CNAE 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66                                            Rama de actividad (empleo secundario) CNAE 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67                                                                                  Colectivo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68                                                        Relación con la actividad económica</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69                                                                                       Edad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70                                                                           Sector económico</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71                                                                      Situación profesional</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72                                                        Tipo de contrato o relación laboral</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73                                                                            Tipo de jornada</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74                                                               Tiempo de búsqueda de empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75                                                                   SITUACION DE INACTIVIDAD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76                                                                                      Tasas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77   Número de horas empleadas en cursar estudios no reglados (en las últimas cuatro semanas)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78                                                                      Número medio de horas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79                                                                 Estudios en curso reglados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80                                                              Estudios en curso no reglados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81                                                       Realizan o no, horas extraordinarias</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82                 Total de horas extraordinarias realizadas en la semana por los asalariados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83                                                          Edad en que finalizo la formación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84                                                   Número de horas habitualmente trabajadas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85                 Total de horas extraordinarias realizadas en la semana por los asalariados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86                                                  Tiempo desde que dejaron el último empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87                                                                     Tipo de administración</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88                                                             Tiempo de residencia en España</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89                                                    Parentesco con la persona de referencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90                                                               Nivel de formación alcanzado</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91                                                                          Estudios en curso</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92                                                                          Estudios reglados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93                                                                               Estado civil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94                                                                               Nacionalidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95                                                                      Zonas de nacionalidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96                                                     Deseo de modificar su horario habitual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97                                           Tiempo que llevan trabajando en el empleo actual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98                                                       Rama de actividad (empleo principal)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99                                                 Situación profesional del empleo principal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 100                                                            Causa de la actividad reducida</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 101                                                  Sectores económicos del empleo principal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 102                                                               Forma de búsqueda de empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 103                                                         Clase principal de la inactividad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 104                                                              Ocupación (empleo principal)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 105                                        Tiempo desde el comienzo o renovación del contrato</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 106                                               Situación profesional del empleo secundario</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 107                                                              Causas de la mayor actividad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 108                                                 Sectores económicos del empleo secundario</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 109                                                Nº de formas de búsqueda de empleo activas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 110                                                     Rama de actividad (empleo secundario)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 111                                                             Ocupación (empleo secundario)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 112                                                           Clase secundaria de inactividad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 113                                                  Duración del contrato o relación laboral</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 114                                                      Tipo de jornada en el empleo buscado</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 115                                                                                 Ocupación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 116                                                                 Rama de actividad CNAE 93</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 117                                                                    Motivos de no trabajar</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 118                                                              Vinculación con la actividad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 119                                                                                    Unidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 120                  Número de horas efectivas trabajadas en la semana en el empleo principal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 121                                                             Motivos de la jornada parcial</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 122                                                                Motivo de no buscar empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 123                                                                  Condición socioeconómica</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 124                                                                      Viviendas familiares</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 125                                                         Número de personas en la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 126                                                          Número de activos en la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 127                                                         Número de ocupados en la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 128                                                          Número de parados en la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 129                     Personas entre 16 y 25 años que conviven con la persona de referencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 130                                       Sectores económicos del empleo secundario CNAE 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 131                                              Sector económico CNAE 2009 del último empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132               Número de personas que conviven en la vivienda con la persona de referencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 133                  Estudiantes entre 16 y 25 años que conviven con la persona de referencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 134                             Número de activos entre los restantes miembros de la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 135                             Número de parados entre los restantes miembros de la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 136              Situación respecto a la actividad de la persona de referencia de la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 137                           Clase de inactividad de la persona de referencia de la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 138                                          Número de perceptores de ingresos en la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 139                         Perceptores de ingresos que conviven con la persona de referencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 140                                      Según perciba o no ingresos la persona de referencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 141                Número de parados que conviven en la vivienda con la persona de referencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 142                                                                     Proporción de parados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 143                                                                    Principales magnitudes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 144                                                   Sector del nivel de formación alcanzado</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 145                                                      Sector de estudios en curso reglados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 146                                                   Sector de estudios en curso no reglados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 147                                                     Objetivo de la formación (no reglada)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 148                                    Participación empresarial en su formación (no reglada)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 149                                                Días trabajados en el domicilio particular</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 150                                                                 Sábados trabajados al mes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 151                                                                Domingos trabajados al mes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 152                                                      Días trabajados al final de la tarde</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 153                                                              Días trabajados por la noche</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 154                                                               Forma de la jornada laboral</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 155                                                          Trabajo con un sistema de turnos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 156                                                                    Tipo de puesto laboral</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157                                     Número de personas que trabajan en el establecimiento</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 158                                    Contratado a través de una empresa de trabajo temporal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 159                                            Participación de una oficina pública de empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 160                                   Motivo de tener un contrato o relación laboral temporal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 161                                                Empleo en el que desean trabajar más horas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 162                                                          Razón de búsqueda de otro empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 163                                                Situación anterior a la búsqueda de empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 164                                                           Causa de dejar el último empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 165                                                 Situación profesional en el último empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 166                                                             Ocupación en el último empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 167                                                        Sector económico del último empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 168                              Motivo de no buscar empleo por cuidar  personas dependientes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 169                                                           Datos para viviendas y personas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 170                                                                          Unidad de medida</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 171                                                                  Clasificación según E.R.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 172                                                                  Clasificación según E.O.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 173                                                       Relación con la actividad económica</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 174                                                                         Tipo de indicador</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 175                                         Horas efectivas trabajadas en el empleo principal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 176                                                           Situación de desempleo por sexo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 177                                                                       Sectores ecónomicos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 178                                                            Conceptos salariales/laborales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 179                                                                     Componentes del coste</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 180                                                                         Tiempo de trabajo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 181                                                                            Tipo de cambio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 182                                                                      Cancelación hipoteca</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 183                                                                    Naturaleza de la finca</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 184                                                                          Capital prestado</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 185                                                                                 Intereses</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 186                                                                       Tramos de extensión</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 187                                                           Entidad que concede el préstamo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 188                                                           Duración en años de la hipoteca</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 189                                                                            Bienes muebles</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 190                                                                       Concepto financiero</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 191                                                         Cifra de Negocio/Personal Ocupado</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 192                                                                            Grupo de Venta</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 193                                                     Destino económico de bienes (CNAE-93)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 194                                                  Destino económico de bienes  (CNAE-2009)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 195                                                                      Fenómeno demográfico</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 196                                                                    Conceptos Demográficos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 197                                                        Conceptos demográficos derivados 2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 198                                                               Conjunto Urbano o No Urbano</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 199                                                                             Grupos COICOP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 200                                                                            Subgrupos 2001</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 201                                                                               Clases 2001</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 202                                                                            Subclases 2001</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 203                                                                    Grupos especiales 2001</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 204                                                                             Rúbricas 2001</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 205                                                                        Grupos COICOP 1992</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 206                                                                            Subgrupos 1992</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 207                                                                               Clases 1992</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 208                                                                            Subclases 1992</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 209                                                                             Rúbricas 1992</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 210                                                                    Grupos especiales 1992</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 211                                                                               Grupos 1992</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 212                                                                               Grupos 1983</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 213                                                                             Rúbricas 1983</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 214                                                                            Subclases 1983</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 215                                                                    Grupos especiales 1983</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 216                                                                               Grupos 1976</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217                                                                             Rúbricas 1976</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 218                                                                            Subclases 1976</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 219                                                                    Capitales de provincia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 220                                                                               Clases 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 221                                                                            Subclases 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 222                                                                            Subgrupos 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 223                                                                                Divisiones</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 224                                                                                    Grupos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 225                          Índices corregidos de efecto calendario, basados en la CNAE-2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 226                                                                 Secciones de la CNAE 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 227                                                           Destino económico de los bienes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 228                                                    Secciones y subsecciones de la CNAE-93</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 229                                               Destino económico de los bienes (Base 2000)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 230                                                      Secciones y subsecciones (Base 2000)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 231                                                                    Divisiones (Base 2000)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 232                                                 Destino económico de los bienes (Base 90)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 233                                                        Secciones y subsecciones (Base 90)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 234                                                                      Divisiones (Base 90)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 235                                   Destino económico de los bienes (Base 2000) exportación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 236                                   Destino económico de los bienes (Base 2000) importación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 237                                                Actividades económicas (Histórico Base 90)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 238                                               Destino económico de los bienes (Base 2005)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 239                                                                    Divisiones (Base 2005)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 240                                              Lugar de referencia del fenómeno demográfico</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 241                                                                              Periodicidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 242                                                                          Edad de la madre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 243                                                                            Subíndice IPCA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 244                                                                                  Ciudades</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 245                                                         Generación/Decadas/Año nacimiento</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 246                                                                    Estrato de asalariados</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 247                                                                        Condición jurídica</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 248                                                                       Actividad principal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 249                                                                         Tipo de operación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 250                        Clasificación Ampliada de la Balanza de Pagos de Servicios (CABPS)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 251                                                                     Estado de la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 252                                                                   Valores simples de edad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 253                                                                           Totales de edad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 254                                                                    Semiintervalos de edad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 255                                                                            Grupos de edad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 256                                                                               Porcentajes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 257                                                             Actividad económica (CNAE-93)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 258                                                             Actividad económica (CNAE-09)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 259                                                                          Tipo de concurso</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 260                                                                    Clase de procedimiento</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 261                                                        Existencia de propuesta anticipada</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 262                                                                       Contenido propuesta</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 263                                                Componentes PIBpm, demanda (a desaparecer)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 264                                                 Componentes PIBpm, oferta (a desaparecer)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 265                                             Operaciones y saldos (con el resto del mundo)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 266                                                             Tipo de dato: Niveles y Tasas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 267                                                                       Tipo de dato: Tasas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 268                                                                                 SECTORES </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 269                                                                RELACIÓN CON LA ACTIVIDAD </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 270                                                                                DIVISIONES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 271                                                                                SECCIONES </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 272                                                                              SUBSECCIONES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 273                                                                                    GRUPOS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 274                                                                    TOTALES VARIABLES CNAE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 275                                                                                    CLASES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 276                                                           DESTINO ECONOMICO DE LOS BIENES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 277                                                                             EUROSTAT_Edad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 278                                                                      Cambios de conceptos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 279                                                                        Volumen de negocio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 280                                                                      Países y Continentes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 281                                                                                    Países</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 282                                                                        Concepto turístico</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 283                                                               Grupos (Base 2005) CNAE -09</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 284                                                                               Continentes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 285                                                                                Divisiones</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 286                                                                                 Secciones</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 287                                Divisiones corregidas de efecto calendario de la CNAE 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 288                                                                                    Grupos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 289                                    Grupos corregidos de efecto calendario de la CNAE 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 290                            Índices corregidos de efecto calendario, basados en la CNAE-74</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 291                            Índices corregidos de efecto calendario, basados en la CNAE-93</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 292                                 Secciones corregidas de efecto calendario de la CNAE 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 293                                                     Zonas Geográficas del Resto del Mundo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 294                                                                       Orden de nacimiento</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 295                                                                               OCUPACIONES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 296                                                                                 Ocupación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 297                                                                       TOTALES OCUPACIONES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 298                                      Situación profesional                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 299                                                             SECTORES DE ESTUDIOS - CNED-F</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 300                                                           TOTALES CLASIFICACION EDUCACIÓN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 301                                                   NIVELES DE FORMACIÓN ALCANZADO - CNED-A</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 302                                                               NIVELES EDUCATIVOS - CNED-P</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 303                                                                                  CANTIDAD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 304                                                                    SITUACION DE ACTIVIDAD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 305               Motivos de jornada parcial, de no buscar empleo y de dejar el último empleo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 306                          Razón por la que trabajó un número de horas distinto al habitual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 307                                                                                     SI/NO</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 308                                                                        TIPO DE TRANSPORTE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 309                                                                   Indicadores Urban Audit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 310                                                         OPERACIONES DE BIENES Y SERVICIOS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 311                                                               OPERACIONES DE DISTRIBUCIÓN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 312                                                                          SALDOS CONTABLES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 313                                                                   RÚBRICAS DE ACUMULACIÓN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 314                           Destino económico de los bienes corregidos de efecto calendario</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 315                                                                          Ocupación CNO-11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 316                                                      Ocupación CNO-11 (empleo secundario)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 317                                                       Ocupación CNO-11 (empleo principal)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 318                                                                                 CAPITALES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 319                                                                 Relación con la actividad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 320                                                                                 Secciones</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 321                                                        Conceptos demográficos derivados 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 322                                     OPERACIÓN DE DISTRIBUCIÓN REMUNERACIÓN DE ASALARIADOS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 323                                                                        SALDO CONTABLE VAB</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 324                                                      OPERACIÓN DE BIENES Y SERVICIOS FBCF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 325                                                                        Grupos COICOP 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 326                                                                             Rúbricas 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 327                                                                    Grupos especiales 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 328                                                                     Situacion profesional</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 329                                                                               Precios_SEC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 330                                                         Empleo por Rama de actividad. CTA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 331                                                                    Régimen de la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 332                                                              Rama de actividad - CNAE2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 333                                                                    Titular de la vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 334                                                                         AGRUPACIONES CNAE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 335                                                                        Grupos COICOP 2011</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 336                                                                    Grupos especiales 2011</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 337                                                                             Rúbricas 2011</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 338                                                                               Clases 2011</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 339                                                                            Subclases 2011</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 340                                                                            Subgrupos 2011</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 341                                                                                    Nombre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 342                                                                                    PADRON</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 343                                                                              Nacionalidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 344                                                                                  Apellido</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 345                                                                          Tipo de apellido</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 346                                                                   VARIABLE NO CONSIDERADA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 347                                                            Ocupación en el último empleo </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 348                                                    Principales Resultados de Contabilidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 349                                                                        Recursos y empleos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 350                                                          Agrupaciones regionales (NUTS 1)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 351                                                        Valor Añadido Bruto de actividades</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 352                                            Formación Bruta de Capital Fijo de actividades</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 353                                                                            Tipo de sector</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 354                                                    Nacionalidad de la persona de refencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 355                                                Porcentajes de renta por unidad de consumo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 356                                             Relación con la actividad en periodo anterior</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 357                                                                                    Clases</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 358                                                                           Tipo de mercado</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 359                                                                     Corrección de efectos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 360                                                                          Tipo de vivienda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 361                                                            Edad de la persona de refencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 362                                                          Sexo de la persona de referencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 363                                                 Problemas que sufre la vivienda y entorno</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 364                                                                          Agrupaciones EPA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 365                                         Personas en cada encuesta e índice de cambio neto</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 366                                                                     SITUACIÓN PROFESIONAL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 367                                                Situación profesional del empleo principal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 368                                               Situación profesional del empleo secundario</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 369                                                        RELACIÓN CON LA ACTIVIDAD DERIVADA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 370                                                         AGRUPACIONES NIVELES DE FORMACIÓN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 371                                                              Tipo de carencia de material</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 372                                                       Dificultad para llegar a fin de mes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 373                                                                                   Dominio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 374                                                                                 Indicador</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 375                                                                Concepto (ANTIGUA DSD BDE)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 376 Motivos por los que no se ha podido cubrir las vacantes existentes en el periodo anterior</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 377                                 Motivos por los que no exiten puestos de trabajo vacantes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 378                                                                   Tipo de establecimiento</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 379                                                                     Título de adquisición</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 380                                                                        Estados Sociedades</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 381                                                                       Clase de disolución</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 382                                                                         Tramos de Capital</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 383                                                        AGRUPACIONES DE NIVELES EDUCATIVOS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 384                                                                  Estado civil de la madre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 385                                                                           Causa de muerte</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 386                                                                                Organismo </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 387                                                                    Personas de referencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 388                                                                          Motivo del viaje</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 389                                                                        Destino de turismo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 390                                                          Semiintervalos de edad conyuge 2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 391                                                                 Materiales y Mano de Obra</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 392                                                                        Edad del cónyuge 2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 393                                                                 Totales de edad conyuge 2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 394                                                                             Tipo de viaje</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 395                                                                        Duración del viaje</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 396                                                                  Sectores institucionales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 397                                                             Sector institucional homólogo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 398                                                                          Balanza de pagos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 399                                                                   Partida de contabilidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 400                                                      Anotación de cuentas internacionales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 401                                                                       Categoría funcional</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 402                                                   Clasificación de instrumentos y activos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 403                                                                               Vencimiento</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 404                                                                                    Moneda</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 405                                                                  Compiliation methodology</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 406                                                                             Consolidación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 407                                                                   Activity classification</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 408                                                                               Expenditure</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 409                                                                            Transformación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 410                                                                            Cust breakdown</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 411                                                                           Detalle periodo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 412                                           Forma de regulación de las relaciones laborales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 413                                                                    Efectos de Comerciales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 414                                                                         Generación/edades</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 415                                                                         Tipo de visitante</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 416                                             Modificaciones condiciones convenio colectivo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 417                                                                        Situación personal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 418                                                Indicadores de Desarrollo Sostenible (ODS)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 419                                                                           Número de hijos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 420                                                                            Nivel de renta</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 421                                                                          Brecha de género</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 422                                                                             Edad del hijo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 423                                                    Motivo de excedencia a tiempo completo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 424                                                                       Percentiles simples</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 425                                                             Semiintervalos de percentiles</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 426                                                                     Grupos de percentiles</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 427                                             Múltiplos del Salario Mínimo Interprofesional</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 428                                                                        Agrupaciones CABPS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 429                                                                      Tiempo de excedencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 430                                                                  Relación con la justicia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 431                                                                         Tipo de violencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 432                                                                        Medidas cautelares</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 433                                                              Tipo de relación sentimental</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 434                                                                        Partidos Políticos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 435                                                                 Ámbitos de representación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 436                                                                     Grupos parlamentarios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 437                                                                                     Cargo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 438                                                                   Órganos Institucionales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 439                                                                          Reales Academias</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 440                                                                    Brecha de parentalidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 441                                                                        Origen del turismo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 442                                                                        Concepto Educativo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 443                                      Convocatoria de la prueba de acceso a la universidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 444                                                                        Actividad cultural</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 445                                                                     Categoría profesional</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 446                                                                      Medidas estadísticas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 447                                                                    Conceptos tecnológicos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 448                                                                       Sector de ejecución</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 449                                                                                Frecuencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 450                                                                    Razón de usar Internet</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 451                                                                          Campo de estudio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 452                                                                  Enseñanza que se imparte</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 453                                                   Lista de actividades de ocio armonizada</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 454                                                          Quien fija el horario de trabajo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 455                                  Redución de las horas trabajadas por el cuidado de niños</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 456                                                                           Tipo de trabajo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 457                                                                         Duración en horas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 458                                                                      Conceptos sanitarios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 459                                                                                    Fuente</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 460                                                            Valoración del estado de salud</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 461                                                       Clase social basada en la ocupación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 462                                                                                Intensidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 463                                                                     Dependencia funcional</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 464                                                                       Tiempo transcurrido</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 465                                                                                Limitación</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 466                                                                Tipo de problema sanitario</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 467                                                                       Lugar del accidente</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 468                                                              Motivo de la consulta médica</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 469                                                                             Masa corporal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 470                                                                          Tipo de alimento</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 471                                                                  Duración de la lactancia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 472                                                                         Tipo de lactancia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 473                                              Persona que realiza la actividad en el hogar</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 474                                                                         Consumo de tabaco</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 475                                                                      Tiempo de exposición</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 476                                                                   Problema medioambiental</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 477                                                                      Tipo de discapacidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 478                                                       Número de personas con discapacidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 479                                                               Sexo del cuidador principal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 480                                                                         Decil de salarios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 481                                                      Tiempo de residencia en el municipio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 482                                              Relacion entre lugar de trabajo y residencia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 483                                            Ubicación del municipio de residencia anterior</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 484                                                                  Tipo de hábitat anterior</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 485                                                     Ubicación del municipio de nacimiento</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 486                                                                           Curso Académico</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 487                                                      Agrupaciones de Sectores de Estudios</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 488                                                                     Número de perceptores</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 489                                                    Modo de adquisición de la nacionalidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 490                                                                     Mes del fallecimiento</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 491                                                                Estado civil del cónyuge 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 492                                                                Estado civil del cónyuge 2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 493                                                                             Tipo de parto</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 494                                                                                 Maturidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 495                                                                  Nacionalidad de la madre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 496                                                                    Nacionalidad del padre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 497                                                                      Asistencia sanitaria</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 498                                                            Nivel de formación de la madre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 499                                                              Nivel de formación del padre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 500                                                                     Orden del nacido vivo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          Codigo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1           NAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3          CCAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5          PROV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7           MUN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8       SUBCITY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9           FUA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10       KERNEL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11         DIST</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12         SECC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 100            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 101            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 102            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 103            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 104            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 105            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 106            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 107            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 108            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 109            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 110            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 111            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 112            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 113            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 114            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 115            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 116            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 117            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 118            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 119            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 120            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 121            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 122            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 123            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 124            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 125            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 126            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 127            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 128            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 129            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 130            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 131            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 133            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 134            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 135            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 136            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 137            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 138            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 139            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 140            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 141            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 142            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 143            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 144            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 145            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 146            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 147            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 148            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 149            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 150            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 151            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 152            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 153            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 154            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 155            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 156            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 158            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 159            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 160            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 161            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 162            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 163            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 164            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 165            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 166            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 167            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 168            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 169            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 170            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 171            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 172            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 173            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 174            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 175            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 176            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 177            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 178            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 179            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 180            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 181            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 182            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 183            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 184            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 185            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 186            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 187            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 188            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 189            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 190            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 191            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 192            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 193            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 194            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 195            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 196            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 197            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 198            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 199            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 200            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 201            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 202            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 203            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 204            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 205            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 206            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 207            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 208            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 209            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 210            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 211            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 212            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 213            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 214            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 215            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 216            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 218            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 219            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 220            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 221            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 222            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 223            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 224            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 225            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 226            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 227            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 228            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 229            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 230            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 231            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 232            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 233            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 234            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 235            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 236            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 237            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 238            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 239            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 240            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 241            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 242            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 243            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 244            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 245            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 246            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 247            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 248            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 249            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 250            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 251            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 252            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 253            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 254            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 255            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 256            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 257            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 258            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 259            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 260            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 261            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 262            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 263            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 264            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 265            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 266            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 267            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 268            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 269            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 270            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 271            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 272            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 273            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 274            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 275            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 276            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 277            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 278            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 279            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 280            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 281            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 282            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 283            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 284            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 285            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 286            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 287            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 288            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 289            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 290            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 291            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 292            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 293            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 294            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 295            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 296            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 297            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 298            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 299            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 300            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 301            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 302            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 303            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 304            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 305            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 306            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 307            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 308            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 309            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 310            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 311            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 312            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 313            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 314            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 315            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 316            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 317            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 318            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 319            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 320            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 321            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 322            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 323            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 324            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 325            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 326            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 327            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 328            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 329            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 330            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 331            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 332            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 333            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 334            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 335            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 336            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 337            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 338            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 339            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 340            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 341            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 342            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 343            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 344            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 345            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 346            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 347            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 348            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 349            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 350            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 351            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 352            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 353            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 354            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 355            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 356            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 357            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 358            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 359            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 360        2613</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 361            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 362            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 363            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 364            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 365            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 366            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 367            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 368            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 369            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 370            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 371            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 372            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 373            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 374            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 375            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 376            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 377            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 378            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 379            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 380            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 381            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 382            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 383            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 384            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 385            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 386            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 387            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 388            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 389            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 390            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 391            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 392            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 393            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 394            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 395            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 396            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 397            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 398            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 399            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 400            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 401            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 402            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 403            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 404            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 405            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 406            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 407    ACTIVITY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 408 EXPENDITURE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 409            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 410            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 411            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 412            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 413            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 414            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 415            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 416            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 417            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 418            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 419            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 420            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 421            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 422            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 423            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 424            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 425            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 426            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 427            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 428            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 429            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 430            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 431            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 432            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 433            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 434            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 435            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 436            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 437            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 438            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 439            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 440            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 441            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 442            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 443            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 444            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 445            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 446            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 447            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 448            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 449            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 450            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 451            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 452            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 453            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 454            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 455            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 456            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 457            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 458            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 459            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 460            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 461            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 462            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 463            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 464            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 465            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 466            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 467            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 468            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 469            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 470            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 471            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 472            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 473            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 474            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 475            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 476            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 477            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 478            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 479            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 480            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 481            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 482            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 483            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 484            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 485            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 486            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 487            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 488            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 489            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 490            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 491            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 492            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 493            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 494            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 495            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 496            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 497            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 498            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 499            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 500            </span>
+<span class="r-in"><span class="fu">get_variables</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"all"</span>, help <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Available params for resource = "all" are: </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> - lang</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Example (basic): get_variables()</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Example (extended): get_variables(resource = "all", lang = "ES")</span>
+<span class="r-in"><span class="fu">get_variables</span><span class="op">(</span><span class="st">"IPC"</span>, resource <span class="op">=</span> <span class="st">"operation"</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     Id                           Nombre Codigo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    3                     Tipo de dato       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   70 Comunidades y Ciudades Autónomas   CCAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  115                       Provincias   PROV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  269           Grupos especiales 2001       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  270                    Rúbricas 2001       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  349            Totales Territoriales    NAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  544            Corrección de efectos       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  762                   Grupos ECOICOP       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  763                Subgrupos ECOICOP       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 764                   Clases ECOICOP       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 765                Subclases ECOICOP       </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

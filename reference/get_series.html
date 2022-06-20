@@ -134,15 +134,52 @@ Possible values are <code>metadata, operation, values, table, metadataoperation,
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC206449"</span><span class="op">)</span>
-<span class="fu">get_series</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"metadata"</span>, help <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC"</span>, resource <span class="op">=</span> <span class="st">"operation"</span><span class="op">)</span>
-<span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC206449"</span>, resource <span class="op">=</span> <span class="st">"values"</span><span class="op">)</span>
-<span class="fu">get_series</span><span class="op">(</span><span class="fl">22350</span>, resource <span class="op">=</span> <span class="st">"table"</span><span class="op">)</span>
-<span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC251541"</span>, resource <span class="op">=</span> <span class="st">"nlast"</span><span class="op">)</span>
-<span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC206449"</span>, resource <span class="op">=</span> <span class="st">"data"</span>, nlast <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
-<span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC"</span>, resource <span class="op">=</span> <span class="st">"by_granularity"</span>, geographical_granularity <span class="op">=</span> <span class="st">"CCAA"</span>, verbose <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC251539"</span>, resource <span class="op">=</span> <span class="st">"by_common_parameters"</span>, verbose <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC206449"</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $Id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 206449</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $COD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "IPC206449"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $FK_Operacion</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $Nombre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Total Nacional. Índice general. Variación mensual. "</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $Decimales</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $FK_Periodicidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $FK_Publicacion</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $FK_Clasificacion</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 49</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $FK_Escala</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $FK_Unidad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 135</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span class="fu">get_series</span><span class="op">(</span>resource <span class="op">=</span> <span class="st">"metadata"</span>, help <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Available params for resource = "metadata" are: </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> - code (serie id)</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> - det</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> - tip</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> - lang</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Example (basic): get_series("IPC206449")</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Example (extended): get_series(code = "IPC206449", resource = "metadata", det = 2, tip = "M", lang = "ES")</span>
+<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
+<span class="r-in"><span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC"</span>, resource <span class="op">=</span> <span class="st">"operation"</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC206449"</span>, resource <span class="op">=</span> <span class="st">"values"</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">get_series</span><span class="op">(</span><span class="fl">22350</span>, resource <span class="op">=</span> <span class="st">"table"</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC251541"</span>, resource <span class="op">=</span> <span class="st">"nlast"</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">get_series</span><span class="op">(</span><span class="st">"IPC206449"</span>, resource <span class="op">=</span> <span class="st">"data"</span>, nlast <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span class="r-in"><span class="op">}</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
